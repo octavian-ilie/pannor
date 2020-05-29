@@ -1,0 +1,19 @@
+{
+  "name": "pannor",
+  "version": "1.0.0",
+  "description": "Simulating a web account for a mobile network operator.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octavian-ilie/pannor.git"
+  },
+  "author": "Octavian Ilie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octavian-ilie/pannor/issues"
+  },
+  "homepage": "https://github.com/octavian-ilie/pannor#readme"
+}
