@@ -16,12 +16,30 @@ const Form = styled.div`
   width: 100%;
 `;
 
+const PhoneNumber = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+
+const Prefix = styled.input`
+  padding: 1rem;
+  padding-right: 0;
+  border: 1px solid #999;
+  border-right: 0;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  outline: none;
+  width: 48px;
+`;
+
 const Input = styled.input`
   padding: 1rem;
   border: 1px solid #999;
   margin-bottom: 1rem;
   font-size: 0.8rem;
   outline: none;
+  flex-grow: 1;
 `;
 
 const Button = styled.button`
@@ -46,4 +64,4 @@ const Error = styled.div`
   background-color: red;
 `;
 
-export { Form, Input, Button, Logo, Card, Error };
+export { Form, PhoneNumber, Input, Prefix, Button, Logo, Card, Error };
