@@ -5,6 +5,7 @@ import PrivBusLink from './HeaderLinks';
 import './Header.css';
 import logo from '../img/pannor-logo-transparent_new.png';
 import { MyPannor } from './MyPannor';
+import { SearchIcon } from './SearchIcon';
 
 const NavLink = styled(Link)`
   color: #222;
@@ -18,9 +19,10 @@ const NavLink = styled(Link)`
   }  
 `;
 
-const MyPannorLink = styled(Link)`
+const HeaderIconLink = styled(Link)`
   color: #222;
   margin-top: -10px;
+  margin-left: 14px;
 
   :hover {
     color: #fa7268;
@@ -47,9 +49,12 @@ function Header() {
           </Link>
         </div>
         <div className="header--my-container">
-          <MyPannorLink to="/my">
+          <HeaderIconLink to="/search">
+            <SearchIcon/>
+          </HeaderIconLink>
+          <HeaderIconLink to="/my">
             <MyPannor/>
-          </MyPannorLink>
+          </HeaderIconLink>
         </div>
       </div>
     </div>
