@@ -1,0 +1,25 @@
+.home-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.home-container {
+  width: 1170px;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.home-slider-container {
+  width: 1400px;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}

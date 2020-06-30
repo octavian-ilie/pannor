@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
 import Header from './components/Header';
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
+import Home from './pages/Home';
 import Overview from './pages/Overview';
 import { AuthContext } from "./context/auth";
 import './App.css';
@@ -14,20 +15,8 @@ function App(props) {
       <Router>
         <Header/>
         <div className="app-container">
-          <div className="navigation">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/signup">Sign up</Link>
-              </li>
-              <li>
-                <Link to="/overview">Overview</Link>
-              </li>
-            </ul>
-          </div>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/my" component={Login} />
           <Route path="/signup" component={Signup} />
           <PrivateRoute path="/overview" component={Overview} />
         </div>
