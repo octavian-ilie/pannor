@@ -6,7 +6,7 @@ import './Login.css';
 
 function Login() {
   return (
-    <div class="login-container">
+    <div className="login-container">
       <Card>
         <Logo src={logoImg} />
         <Form>

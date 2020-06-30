@@ -13,8 +13,8 @@ function App(props) {
     <AuthContext.Provider value={false}>
       <Router>
         <Header/>
-        <div class="app-container">
-          <div class="navigation">
+        <div className="app-container">
+          <div className="navigation">
             <ul>
               <li>
                 <Link to="/">Home</Link>
