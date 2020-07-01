@@ -17,8 +17,8 @@
 }
 
 .home-slider-container {
-  width: 1400px;
-  height: 500px;
+  max-width: 1400px;
+  height: auto;
   display: flex;
   align-items: flex-start;
   flex-direction: column;

@@ -9,7 +9,7 @@ function Signup() {
       <Logo src={logoImg} />
       <Form>
         <PhoneNumber>
-          <Prefix type="text" value="0788"/>
+          <Prefix type="text" value="0788" readOnly/>
           <Input type="number" placeholder="123456"/>
         </PhoneNumber>
         <Input type="password" placeholder="New password" />

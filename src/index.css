@@ -1,3 +1,44 @@
+@font-face {
+  font-family: 'Octavian Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/fonts/Octavian-Regular.eot?r-1810058");
+  src: url("../src/fonts/Octavian-Regular.eot?#iefix?r-1810058") format("embedded-opentype"), 
+       url("../src/fonts/Octavian-Regular.svg?v=20151022b#Octavian-Regular?r-1810058") format("svgz"),
+       url("../src/fonts/Octavian-Regular.svg?v=20151022b#Octavian-Regular?r-1810058") format("svg"),
+       url("../src/fonts/Octavian-Regular.woff?v=20151022b?r-1810058") format("woff"),
+       url("../src/fonts/Octavian-Regular.woff?v=20151022b?r-1810058") format("woff")
+}
+
+@font-face {
+  font-family: 'Octavian Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/fonts/Octavian-Medium.eot?r-1810058");
+  src: url("../src/fonts/Octavian-Medium.eot?#iefix?r-1810058") format("embedded-opentype"), 
+       url("../src/fonts/Octavian-Medium.svg?v=20151022b#Octavian-Medium?r-1810058") format("svgz"),
+       url("../src/fonts/Octavian-Medium.svg?v=20151022b#Octavian-Medium?r-1810058") format("svg"),
+       url("../src/fonts/Octavian-Medium.woff?v=20151022b?r-1810058") format("woff"),
+       url("../src/fonts/Octavian-Medium.woff?v=20151022b?r-1810058") format("woff")
+}
+
+@font-face {
+  font-family: 'Octavian Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/fonts/Octavian-Bold.eot?r-1810058");
+  src: url("../src/fonts/Octavian-Bold.eot?#iefix?r-1810058") format("embedded-opentype"),
+       url("../src/fonts/Octavian-Bold.svg?v=20151022b#octavian-bold?r-1810058") format("svgz"),
+       url("../src/fonts/Octavian-Bold.svg?v=20151022b#octavian-bold?r-1810058") format("svg"),
+       url("../src/fonts/Octavian-Bold.woff?v=20151022b?r-1810058") format("woff"),
+       url("../src/fonts/Octavian-Bold.woff?v=20151022b?r-1810058") format("woff")
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

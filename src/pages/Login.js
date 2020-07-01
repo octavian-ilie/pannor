@@ -1,17 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import logoImg from '../img/pannor-logo.png';
-import { Card, Logo, Form, PhoneNumber, Prefix, Input, Button } from '../components/AuthForms';
+import { Card, Form, PhoneNumber, Prefix, Input, Button } from '../components/AuthForms';
 import './Login.css';
 
 function Login() {
   return (
     <div className="login-container">
       <Card>
-        <Logo src={logoImg} />
         <Form>
           <PhoneNumber>
-            <Prefix type="text" value="0788"/>
+            <Prefix type="text" value="0788" readOnly/>
             <Input type="number" placeholder="123456"/>
           </PhoneNumber>
           <Input type="password" placeholder="Password" />

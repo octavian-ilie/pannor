@@ -1,0 +1,330 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    padding: 0;
+  }
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 1400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    border-radius: 0;
+  }
+}
+
+.slider {
+  display: -webkit-box;
+  display: flex;
+  width: 500%;
+  height: 600px;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+@media only screen and (max-width: 1000px) {
+  .slider {
+    height: 100vh;
+  }
+}
+.slider .box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+@media only screen and (max-width: 650px) {
+  .slider .box {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.slider .box .bg {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  -webkit-transform: skewX(7deg);
+          transform: skewX(7deg);
+  position: absolute;
+  height: 100%;
+  left: -10%;
+  padding-left: 20rem;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+@media only screen and (max-width: 800px) {
+  .slider .box .bg {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .bg {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 54%;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+.slider .box .bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: inherit;
+  pointer-events: none;
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .bg::before {
+    width: 120%;
+    bottom: 0;
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+.slider .box .details {
+  padding: 5rem;
+  padding-left: 7.4rem;
+  z-index: 100;
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+@media only screen and (max-width: 650px) {
+  .slider .box .details {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    -webkit-transform: translateY(-9rem);
+            transform: translateY(-9rem);
+  }
+}
+.slider .box .details h1 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: #fa7268;
+  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.slider .box .details img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+.slider .box .details p {
+  display: block;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+}
+@media only screen and (max-width: 800px) {
+  .slider .box .details p {
+    margin-right: 0;
+  }
+}
+.slider .box .details button {
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.slider .box .details button:hover {
+  opacity: .8;
+}
+.slider .box .details button:focus {
+  outline: none;
+  border: none;
+}
+
+.slider .box1 {
+  background: url('../img/woman-celebrating.jpg') no-repeat center center/cover;
+}
+.slider .box1 button {
+  background-color: #fa7268;
+}
+
+.slider .box2 {
+  background: url('../img/esim2-apple-watch-hero.png') no-repeat center center/cover;
+}
+.slider .box2 button {
+  background-color: #fa7268;
+}
+
+.slider .box3 {
+  background: url('../img/cell-tower.jpg') no-repeat center center/cover;
+}
+.slider .box3 button {
+  background-color: #fa7268;
+}
+
+.slider .box4 {
+  background: url('../img/prepaid-sim-promo.png') no-repeat center center/cover;
+}
+.slider .box4 button {
+  background-color: #fa7268;
+}
+
+.slider .box5 {
+  background: url('../img/man_holding-phone.jpg') no-repeat center center/cover;
+}
+.slider .box5 button {
+  background-color: #fa7268;
+}
+
+.slider .illustration {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  justify-self: center;
+}
+@media only screen and (max-width: 650px) {
+  .slider .illustration {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
+.slider .illustration div {
+  height: 25rem;
+  width: 18rem;
+  border-radius: 3rem;
+  background-color: #FF0077;
+  position: relative;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+}
+@media only screen and (max-width: 800px) {
+  .slider .illustration div {
+    height: 20rem;
+    width: 15rem;
+  }
+}
+.slider .illustration div::after, .slider .illustration div::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  top: 0;
+  left: 0;
+}
+.slider .illustration div::after {
+  -webkit-transform: translate(4rem, -1rem);
+          transform: translate(4rem, -1rem);
+}
+.slider .illustration div::before {
+  -webkit-transform: translate(2rem, -2rem);
+          transform: translate(2rem, -2rem);
+}
+
+.prev,
+.next,
+.trail {
+  z-index: 10000;
+  position: absolute;
+}
+
+.prev,
+.next {
+  width: 1.8rem;
+  cursor: pointer;
+  opacity: .2;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+@media only screen and (max-width: 650px) {
+  .prev,
+  .next {
+    display: none;
+  }
+}
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.prev {
+  top: 50%;
+  left: 2%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.next {
+  top: 50%;
+  right: 2%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.trail {
+  bottom: 4%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 83%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 650px) {
+  .trail {
+    width: 90%;
+    bottom: 13%;
+  }
+}
+.trail div {
+  padding: 1rem;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+  opacity: .3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.trail div:hover {
+  opacity: .6;
+}
+@media only screen and (max-width: 650px) {
+  .trail div {
+    padding: 1rem;
+  }
+}
+
+.active {
+  opacity: 1 !important;
+}
