@@ -31,7 +31,7 @@ function HomeSlider(props) {
         <div className="box3 box">
           <div className="bg"></div>
           <div className="details">
-            <h1>Conecting the Netherlands</h1>
+            <h1>Connecting the Netherlands</h1>
             <p>
                 Keeping everyone connected is our top priority. We work on expanding our 4G and 5G coverage daily. Check our updated coverage map.
             </p>
