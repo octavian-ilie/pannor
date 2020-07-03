@@ -1,14 +1,14 @@
 // Slider(all Slides in a container)
-const slider = document.querySelector(".slider")
+const slider = document.querySelector(".slider");
 // All trails 
-const trail = document.querySelector(".trail").querySelectorAll("div")
+const trail = document.querySelector(".trail").querySelectorAll("div");
 
 // Transform value
-let value = 0
+let value = 0;
 // trail index number
-let trailValue = 0
+let trailValue = 0;
 // interval (Duration)
-let interval = 6000
+let interval = 6000;
 
 // Function to slide forward
 const slide = (condition) => {
