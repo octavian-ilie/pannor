@@ -120,7 +120,7 @@ const clickCheck = (e) => {
 }
 
 // Add function to all trails
-trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
+trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)));
 
 // Mobile touch Slide Section
 const touchSlide = (() => {
