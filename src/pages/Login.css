@@ -1,5 +1,9 @@
 .login-container {
+  display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 110px);
+  background: url('../img/my_bg-faded.jpg') no-repeat;
+  background-size: cover;
 }
