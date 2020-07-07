@@ -1,8 +1,13 @@
 import React from "react";
 import './Home.css';
 import { useEffect } from 'react'
-import HomeSlider from '../components/HomeSlider';
 import loadjs from 'loadjs';
+import HomeSlider from '../components/HomeSlider';
+import FAPayInvoice from '../components/FAPayInvoice';
+import FATopUp from '../components/FATopUp';
+import FAChangePlan from '../components/FAChangePlan';
+import FAPannorCloud from '../components/FAPannorCloud';
+import FAEmergency from '../components/FAEmergency';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -18,6 +23,13 @@ function Home(props) {
   return <div className="home-wrapper">
     <div className="home-slider-container">
       <HomeSlider></HomeSlider>
+    </div>
+    <div className="home-fast-access-container">
+      <FAPayInvoice/>
+      <FATopUp/>
+      <FAChangePlan/>
+      <FAPannorCloud/>
+      <FAEmergency/>
     </div>
     <div className="home-container">
       

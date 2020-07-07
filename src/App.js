@@ -21,6 +21,7 @@ function App(props) {
             <Route exact path="/my" component={Login} />
             <Route path="/signup" component={Signup} />
             <PrivateRoute path="/overview" component={Overview} />
+            <PrivateRoute path="/my/plan" component={Overview} />
             <Route path="*">
               <NotFound/>
             </Route>
