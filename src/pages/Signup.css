@@ -1,11 +1,11 @@
-.login-container {
+.signup-container {
   display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  min-height: 780px;
   height: calc(100vh - 110px);
-  background: url('../img/my_bg-faded.jpg') no-repeat;
+  background: url('../img/cozy-home_bg.jpg') no-repeat;
   background-size: cover;
   overflow: hidden;
   overflow-y: auto;

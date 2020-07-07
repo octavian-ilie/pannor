@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Card, Form, Title, Text, PhoneNumber, Input, Button } from '../components/AuthForms';
+import { Card, Form, Title, Text, Input, Button } from '../components/AuthForms';
 import './Login.css';
 
 const SignUpLink = styled(Link)`
@@ -25,13 +25,11 @@ function Login() {
           Fill in your username or your Pannor phone number and your password to continue.
         </Text>
         <Form>
-          <PhoneNumber>
-            <Input type="text" placeholder="username"/>
-          </PhoneNumber>
+          <Input type="text" placeholder="username"/>
           <Input type="password" placeholder="password" />
           <Button>Continue</Button>
         </Form>
-        <SignUpLink to="/signup">Don't have an account yet? Let's create one.</SignUpLink>
+        <SignUpLink to="/my/signup">Don't have an account yet? Let's create one.</SignUpLink>
       </Card>
     </div>
   );

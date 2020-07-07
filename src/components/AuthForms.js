@@ -9,7 +9,7 @@ const Card = styled.div`
   align-items: flex-start;
   background-color: #fff;
   border-radius: 3px;
-  margin-top: -60px;
+  margin-top: 0px;
 `;
 
 const Title = styled.div`
