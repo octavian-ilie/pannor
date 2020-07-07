@@ -8,6 +8,7 @@ import FATopUp from '../components/FATopUp';
 import FAChangePlan from '../components/FAChangePlan';
 import FAPannorCloud from '../components/FAPannorCloud';
 import FAEmergency from '../components/FAEmergency';
+import PCShop from '../components/PCShop';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -30,6 +31,9 @@ function Home(props) {
       <FAChangePlan/>
       <FAPannorCloud/>
       <FAEmergency/>
+    </div>
+    <div className="promo-cards-container">
+      <PCShop/><PCShop/><PCShop/>
     </div>
     <div className="home-container">
       

@@ -27,7 +27,16 @@
 .home-fast-access-container {
   width: 1170px;
   height: auto;
-  padding: 30px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.promo-cards-container {
+  width: 1170px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
