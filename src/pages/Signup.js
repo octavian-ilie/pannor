@@ -27,7 +27,7 @@ function Signup() {
         <Form>
           <Input type="text" placeholder="First Name"/>
           <Input type="text" placeholder="Last Name"/>
-          <Input type="tel" placeholder="Pannor number"/>
+          <Input type="tel" placeholder="Pannor number / Customer number"/>
           <Input type="email" placeholder="E-mail"/>
           <Input type="password" placeholder="New password" />
           <Input type="password" placeholder="Confirm password" />
