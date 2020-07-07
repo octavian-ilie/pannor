@@ -4,7 +4,7 @@
 
 .notfound-container {
   width: 100%;
-  height: calc(100vh - 109px);
+  height: calc(100vh - 110px);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;

@@ -21,7 +21,7 @@ const NavLink = styled(Link)`
 
 const HeaderIconLink = styled(Link)`
   color: #222;
-  margin-top: -10px;
+  margin-top: -14px;
   margin-left: 14px;
 
   :hover {
