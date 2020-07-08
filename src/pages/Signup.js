@@ -16,7 +16,7 @@ const SignInLink = styled(Link)`
 
 function Signup() {
   return (
-    <div class="signup-container">
+    <div className="signup-container">
       <Card>
         <Title>
           Sign up for myPannor

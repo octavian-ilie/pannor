@@ -20,7 +20,7 @@ function PCUnlimitedX() {
       <Text>
         We know how important it is to keep in touch with your loved ones or business partners. We've created Unlimited X just for that.
       </Text>
-      <PromoLink to="/support/shops">Activate or switch plan</PromoLink>
+      <PromoLink to="/shop/plans">Activate or switch plan</PromoLink>
     </PromoCard>
   )
 }
