@@ -23,7 +23,7 @@ const Text = styled.div`
 const PromoLink = styled(Link)`
   color: #fff;
   text-decoration: none;
-  background-color: #fa7268;
+  background-color: #222;
   border-radius: 3px;
   font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 12px 16px 8px 16px;
@@ -31,7 +31,7 @@ const PromoLink = styled(Link)`
   position: relative;
 
   &:hover {
-    background-color: #222;
+    background-color: #fa7268;
   }
 
   &::after {

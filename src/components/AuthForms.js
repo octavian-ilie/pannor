@@ -64,7 +64,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  background: #fa7268;
+  background: #222;
   border: 0;
   border-radius: 3px;
   padding: 18px 16px 14px 16px;
@@ -81,7 +81,7 @@ const Button = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    background-color: #222;
+    background-color: #fa7268;
   }
 `;
 
