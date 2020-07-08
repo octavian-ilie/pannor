@@ -1,29 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCard';
-import img from '../img/Pannor_Shop-small.jpg';
+import img from '../img/unlimited-x_promo-card.png';
 
 const Image = styled.div`
   height: 230px;
   width: 100%;
   background: url(${img}) no-repeat top center/cover;
-  background-size: 110%;
   margin-bottom: 2rem;
 `;
 
-function PCShop() {
+function PCUnlimitedX() {
   return (
     <PromoCard>
       <Image/>
       <Title>
-        Come visit our new Pannor Shops
+        Call, text and surf worry free with Unlimited X
       </Title>
       <Text>
-        We are happy to welcome you in one of our brand new Pannor Shops across the country, or reach out to one of our Partner Centers.
+        We know how important it is to keep in touch with your loved ones or business partners. We've created Unlimited X just for that.
       </Text>
-      <PromoLink to="/support/shops">Find your local Shop</PromoLink>
+      <PromoLink to="/support/shops">Activate or switch plan</PromoLink>
     </PromoCard>
   )
 }
 
-export default PCShop;
+export default PCUnlimitedX;

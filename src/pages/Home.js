@@ -9,6 +9,7 @@ import FAChangePlan from '../components/FAChangePlan';
 import FAPannorCloud from '../components/FAPannorCloud';
 import FAEmergency from '../components/FAEmergency';
 import PCShop from '../components/PCShop';
+import PCUnlimitedX from '../components/PCUnlimitedX';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -33,7 +34,7 @@ function Home(props) {
       <FAEmergency/>
     </div>
     <div className="promo-cards-container">
-      <PCShop/><PCShop/><PCShop/>
+      <PCShop/><PCUnlimitedX/><PCShop/>
     </div>
     <div className="home-container">
       
