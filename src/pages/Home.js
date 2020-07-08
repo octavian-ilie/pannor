@@ -12,6 +12,7 @@ import PCShop from '../components/PCShop';
 import PCUnlimitedX from '../components/PCUnlimitedX';
 import PCNetflix from '../components/PCNetflix';
 import HC5G from '../components/HC5G';
+import HCiPhone11 from '../components/HCiPhone11';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -39,6 +40,7 @@ function Home(props) {
       <PCShop/><PCUnlimitedX/><PCNetflix/>
     </div>
     <HC5G/>
+    <HCiPhone11/>
     <div className="home-container">
       
     </div>

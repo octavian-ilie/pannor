@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Card, CardInfoContainer, Title, Text, Go } from './HomepageCards';
+import { Container, GrayCard, CardInfoContainer, Title, Text, Go } from './HomepageCards';
 import img from '../img/man_holding-laptop.jpg';
 
 const Image = styled.div`
@@ -12,7 +12,7 @@ const Image = styled.div`
 function HC5G() {
   return (
     <Container>
-      <Card>
+      <GrayCard>
         <CardInfoContainer>
           <Title>
             The best 5G network
@@ -23,7 +23,7 @@ function HC5G() {
           <Go to="/support/coverage/5g">Find out where you can enjoy high 5G speeds</Go>
         </CardInfoContainer>
         <Image/>
-      </Card>
+      </GrayCard>
     </Container>
   )
 }

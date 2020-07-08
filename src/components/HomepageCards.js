@@ -7,13 +7,31 @@ const Container = styled.div`
   margin-top: 54px;
 `;
   
-const Card = styled.div`
+const GrayCard = styled.div`
   width: 100%;
   height: 300px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   background-color: #f4f4f4;
+`;
+
+const WhiteCard = styled.div`
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #fff;
+`;
+
+const HueCard = styled.div`
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #ffdfde;
 `;
 
 const CardInfoContainer = styled.div`
@@ -47,4 +65,4 @@ const Go = styled(Link)`
   }
 `;
 
-export { Container, Card, CardInfoContainer, Title, Text, Go };
+export { Container, GrayCard, WhiteCard, HueCard, CardInfoContainer, Title, Text, Go };
