@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCard';
+import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCards';
 import img from '../img/unlimited-x_promo-card.png';
 
 const Image = styled.div`

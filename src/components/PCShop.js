@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCard';
+import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCards';
 import img from '../img/Pannor_Shop-small.jpg';
 
 const Image = styled.div`
   height: 230px;
   width: 100%;
-  background: url(${img}) no-repeat top center/cover;
-  background-size: 110%;
+  background: url(${img}) no-repeat center center/cover;
+  background-size: 130%;
   margin-bottom: 2rem;
 `;
 

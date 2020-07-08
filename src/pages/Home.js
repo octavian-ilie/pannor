@@ -1,6 +1,6 @@
 import React from "react";
 import './Home.css';
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 import loadjs from 'loadjs';
 import HomeSlider from '../components/HomeSlider';
 import FAPayInvoice from '../components/FAPayInvoice';
@@ -11,6 +11,7 @@ import FAEmergency from '../components/FAEmergency';
 import PCShop from '../components/PCShop';
 import PCUnlimitedX from '../components/PCUnlimitedX';
 import PCNetflix from '../components/PCNetflix';
+import HC5G from '../components/HC5G';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -37,6 +38,7 @@ function Home(props) {
     <div className="promo-cards-container">
       <PCShop/><PCUnlimitedX/><PCNetflix/>
     </div>
+    <HC5G/>
     <div className="home-container">
       
     </div>
