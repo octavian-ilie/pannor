@@ -15,6 +15,7 @@ import HC5G from '../components/HC5G';
 import HCiPhone11 from '../components/HCiPhone11';
 import HCHomepack4G from '../components/HCHomepack4G';
 import HCmyPannorApp from '../components/HCmyPannorApp';
+import PopularPhones from '../components/home/PopularPhones';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -45,6 +46,7 @@ function Home(props) {
     <HCiPhone11/>
     <HCHomepack4G/>
     <HCmyPannorApp/>
+    <PopularPhones/>
     <div className="home-container">
       
     </div>
