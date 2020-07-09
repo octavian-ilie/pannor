@@ -13,6 +13,7 @@ import PCUnlimitedX from '../components/PCUnlimitedX';
 import PCNetflix from '../components/PCNetflix';
 import HC5G from '../components/HC5G';
 import HCiPhone11 from '../components/HCiPhone11';
+import HCHomepack4G from '../components/HCHomepack4G';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -41,6 +42,7 @@ function Home(props) {
     </div>
     <HC5G/>
     <HCiPhone11/>
+    <HCHomepack4G/>
     <div className="home-container">
       
     </div>

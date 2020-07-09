@@ -13,7 +13,7 @@ const GrayCard = styled.div`
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
 `;
 
 const WhiteCard = styled.div`
@@ -31,7 +31,7 @@ const HueCard = styled.div`
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  background-color: #ffdfde;
+  background-color: rgba(250, 114, 104, 0.1);
 `;
 
 const CardInfoContainer = styled.div`
