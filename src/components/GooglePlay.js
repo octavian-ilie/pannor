@@ -6,7 +6,7 @@ const Svg = styled(Icon)`
   width: 158px; 
   height: 56px;
   margin-top: 2px;
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 
 const GooglePlay = ({ className }) => ( 

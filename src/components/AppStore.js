@@ -5,7 +5,7 @@ import Icon from './Icon';
 const Svg = styled(Icon)` 
   width: 140px; 
   height: 60px;
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 
 const AppStore = ({ className }) => ( 
