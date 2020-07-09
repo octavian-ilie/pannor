@@ -14,6 +14,7 @@ import PCNetflix from '../components/PCNetflix';
 import HC5G from '../components/HC5G';
 import HCiPhone11 from '../components/HCiPhone11';
 import HCHomepack4G from '../components/HCHomepack4G';
+import HCmyPannorApp from '../components/HCmyPannorApp';
 
 function Home(props) {
   let scriptCode = Date.now();
@@ -43,6 +44,7 @@ function Home(props) {
     <HC5G/>
     <HCiPhone11/>
     <HCHomepack4G/>
+    <HCmyPannorApp/>
     <div className="home-container">
       
     </div>

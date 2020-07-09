@@ -65,4 +65,9 @@ const Go = styled(Link)`
   }
 `;
 
-export { Container, GrayCard, WhiteCard, HueCard, CardInfoContainer, Title, Text, Go };
+const AppsContainer = styled.div`
+  display: flex;
+  margin-bottom: -16px;
+`;
+
+export { Container, GrayCard, WhiteCard, HueCard, CardInfoContainer, Title, Text, Go, AppsContainer };
