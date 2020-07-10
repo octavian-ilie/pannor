@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Icon from './Icon';
+import Facebook from './icons/social/Facebook';
+import Instagram from './icons/social/Instagram';
+import Twitter from './icons/social/Twitter';
+import YouTube from './icons/social/YouTube';
 
 const Background = styled.div`
   width: 100%;
@@ -90,6 +94,15 @@ const LogoText = styled.div`
   font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2rem;
   color: #222;
+  letter-spacing: -1px;
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
 `;
 
 const CopyRow = styled.div`
@@ -108,6 +121,26 @@ const Copyright = styled.div`
 const Cookies = styled(Link)`
   color: #555;
   font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    color: #222;
+  }
+`;
+
+const SocialLink = styled.a`
+  color: #555;
+  text-decoration: none;
+  padding-left: 10px;
+  margin-left: 10px;
+
+  &:hover {
+    color: #222;
+  }
+`;
+
+const CopyLink = styled.a`
+  color: #555;
   text-decoration: none;
 
   &:hover {
@@ -172,10 +205,24 @@ function Footer() {
           <LogoText>
             pannor
           </LogoText>
+          <SocialLinks>
+            <SocialLink href="https://www.facebook.com/pannor.nl" target="_blank">
+              <Facebook height="24px" width="24px"/>
+            </SocialLink>
+            <SocialLink href="https://www.instagram.com/pannor.nl" target="_blank">
+              <Instagram height="24px" width="24px"/>
+            </SocialLink>
+            <SocialLink href="https://www.twitter.com/pannor.nl" target="_blank">
+              <Twitter height="24px" width="24px"/>
+            </SocialLink>
+            <SocialLink href="https://www.youtube.com/pannor.nl" target="_blank">
+              <YouTube height="24px" width="24px"/>
+            </SocialLink>
+          </SocialLinks>
         </MediaRow>
         <CopyRow>
           <Copyright>
-            2020 © Pannor Nederland B.V. All rights reserved.
+            2020 © Project property of <CopyLink href="https://www.octavian.nl" target="_blank">Octavian</CopyLink>.
           </Copyright>
           <Cookies to="/legal/cookies">Cookie settings</Cookies>
         </CopyRow>
