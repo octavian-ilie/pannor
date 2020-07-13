@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../rules/device';
 
 const Card = styled.div`
   box-sizing: border-box;
@@ -10,6 +11,12 @@ const Card = styled.div`
   background-color: #fff;
   border-radius: 3px;
   margin-top: 0px;
+
+  @media ${device.tablet} { 
+    width: 100%;
+    border-radius: 0;
+    padding: 2rem 1rem;
+  }
 `;
 
 const Title = styled.div`

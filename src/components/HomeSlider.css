@@ -24,6 +24,13 @@
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .container {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
 .slider {
   display: -webkit-box;
   display: flex;
@@ -36,7 +43,7 @@
 }
 @media only screen and (max-width: 1000px) {
   .slider {
-    height: 100vh;
+    height: calc(100vh - 50px );
   }
 }
 .slider .box {

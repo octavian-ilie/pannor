@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../rules/device';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -24,6 +25,10 @@ const Slider = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  @media ${device.laptopL} { 
+    max-width: 100%;
+  }
 `;
 
 const FastAccess = styled.div`

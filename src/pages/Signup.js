@@ -3,7 +3,29 @@ import { Link } from 'react-router-dom';
 import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import { Card, Title, Text, Form, Input, Button } from '../components/AuthForms';
-import './Signup.css';
+import { device } from '../rules/device';
+import background from '../img/cozy-home_bg.jpg';
+
+const Container = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 780px;
+  height: calc(100vh - 110px);
+  background: url(${background}) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @media ${device.laptop} { 
+    min-height: calc(100vh - 54px);
+  }
+
+  @media ${device.tablet} { 
+    align-items: flex-start;
+  }
+`;
 
 const SignInLink = styled(Link)`
   text-decoration: none;
@@ -16,11 +38,10 @@ const SignInLink = styled(Link)`
 `;
 
 function Signup() {
-
   document.title = defaultTitle + 'Sign up';
 
   return (
-    <div className="signup-container">
+    <Container>
       <Card>
         <Title>
           Sign up for myPannor
@@ -39,7 +60,7 @@ function Signup() {
         </Form>
         <SignInLink to="/my">Already have an account? Sign in.</SignInLink>
       </Card>
-    </div>
+    </Container>
   );
 }
 

@@ -3,7 +3,29 @@ import { Link } from 'react-router-dom';
 import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import { Card, Form, Title, Text, Input, Button } from '../components/AuthForms';
-import './Login.css';
+import background from '../img/my_bg-faded.jpg';
+import { device } from '../rules/device';
+
+const Container = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  height: calc(100vh - 110px);
+  background: url(${background}) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @media ${device.laptop} { 
+    min-height: calc(100vh - 54px);
+  }
+
+  @media ${device.tablet} { 
+    align-items: flex-start;
+  }
+`;
 
 const SignUpLink = styled(Link)`
   text-decoration: none;
@@ -19,7 +41,7 @@ function Login() {
   document.title = defaultTitle + 'Sign in';
 
   return (
-    <div className="login-container">
+    <Container>
       <Card>
         <Title>
           Sign in to your account
@@ -34,7 +56,7 @@ function Login() {
         </Form>
         <SignUpLink to="/my/signup">Don't have an account yet? Let's create one.</SignUpLink>
       </Card>
-    </div>
+    </Container>
   );
 }
 

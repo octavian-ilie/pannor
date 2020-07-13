@@ -13,7 +13,7 @@
 
   #menu-toggle .menu-icon {
     cursor: pointer;
-    padding: 28px 6px;
+    padding: 28px 36px;
     position: relative;
     user-select: none;
   }
@@ -21,7 +21,7 @@
   #menu-toggle .menu-icon .navicon {
     background: #222;
     display: block;
-    height: 1px;
+    height: 1.2px;
     position: relative;
     transition: background 0.3s ease-out;
     width: 24px;
