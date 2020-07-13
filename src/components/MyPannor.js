@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../rules/device';
 import Icon from './Icon';
 
 const Svg = styled(Icon)` 
   width: 48px; 
   height: 48px;
   transition: all 0.2s ease-in-out;
+
+  @media ${device.laptop} { 
+    height: 32px;
+    width: 32px;
+  }
 `;
 
 export const MyPannor = ({ className }) => ( 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../rules/device';
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -17,6 +18,14 @@ const PrivBusWrapper = styled.div`
   height: auto;
   display: flex;
   flex-direction: row;
+  
+  @media ${device.laptopL} { 
+    max-width: 1000px;
+  }
+  
+  @media ${device.laptop} { 
+    display: none;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -28,6 +37,10 @@ const NavLink = styled(Link)`
 
   &:hover {
     color: #fa7268;
+  }
+
+  @media ${device.laptop} { 
+    display: none;
   }
 `;
 
@@ -49,6 +62,15 @@ const HeaderWrapper = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-bottom: 20px;
+
+  @media ${device.laptopL} { 
+    max-width: 1000px;
+  }
+
+  @media ${device.laptop} { 
+    max-width: 100%;
+    padding: 6px 0;
+  }
 `;
 
 const NavContainer = styled.div`
@@ -56,6 +78,11 @@ const NavContainer = styled.div`
   width: 40%;
   display: flex;
   align-items: center;
+
+  @media ${device.laptop} { 
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -63,12 +90,21 @@ const LogoContainer = styled.div`
   width: 20%;
   display: flex;
   justify-content: center;
+
+  @media ${device.laptop} { 
+    align-items: center;
+  }
 `;
 
 const BrandLogo = styled.img`
   height: 60px;
   margin-top: -12px;
   transition: all 0.3s ease;
+
+  @media ${device.laptop} { 
+    height: 30px;
+    margin: 2px 0 -2px 0;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -77,6 +113,11 @@ const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media ${device.laptop} { 
+    margin-right: 8px;
+    align-items: flex-end;
+  }
 `;
 
 export { HeaderContainer, PrivBusWrapper, NavLink, HeaderIconLink, HeaderWrapper, NavContainer, LogoContainer, BrandLogo, IconsContainer };

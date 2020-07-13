@@ -5,6 +5,7 @@ import PrivBusLink from './HeaderLinks';
 import logo from '../img/pannor-logo-transparent_new.png';
 import { MyPannor } from './MyPannor';
 import { SearchIcon } from './SearchIcon';
+import './MobileMenu.css';
 
 function Header() {
   return (
@@ -19,6 +20,10 @@ function Header() {
           <NavLink to="/mobile">Mobile</NavLink>
           <NavLink to="/landline">Internet & TV</NavLink>
           <NavLink to="/support">Support</NavLink>
+          <div id="menu-toggle">
+            <input className="menu-btn" type="checkbox" id="menu-btn" />
+            <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+          </div>
         </NavContainer>
         <LogoContainer>
           <Link to="/">
