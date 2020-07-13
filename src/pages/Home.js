@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import { useEffect } from 'react';
 import loadjs from 'loadjs';
+import defaultTitle from '../rules/defaultTitle';
 import HomeSlider from '../components/HomeSlider';
 import FAPayInvoice from '../components/FAPayInvoice';
 import FATopUp from '../components/FATopUp';
@@ -20,6 +21,8 @@ import DeliveryOptions from '../components/home/DeliveryOptions';
 import Footer from '../components/Footer';
 
 function Home(props) {
+  document.title = defaultTitle + 'Mobile, landline, internet and TV with great coverage';
+
   let scriptCode = Date.now();
 
   useEffect(() => {
@@ -30,28 +33,30 @@ function Home(props) {
     });
   });
 
-  return <div className="home-wrapper">
-    <div className="home-slider-container">
-      <HomeSlider></HomeSlider>
+  return (
+    <div className="home-wrapper">
+      <div className="home-slider-container">
+        <HomeSlider></HomeSlider>
+      </div>
+      <div className="home-fast-access-container">
+        <FAPayInvoice/>
+        <FATopUp/>
+        <FAChangePlan/>
+        <FAPannorCloud/>
+        <FAEmergency/>
+      </div>
+      <div className="promo-cards-container">
+        <PCShop/><PCUnlimitedX/><PCNetflix/>
+      </div>
+      <HC5G/>
+      <HCiPhone11/>
+      <HCHomepack4G/>
+      <HCmyPannorApp/>
+      <PopularPhones/>
+      <DeliveryOptions/>
+      <Footer/>
     </div>
-    <div className="home-fast-access-container">
-      <FAPayInvoice/>
-      <FATopUp/>
-      <FAChangePlan/>
-      <FAPannorCloud/>
-      <FAEmergency/>
-    </div>
-    <div className="promo-cards-container">
-      <PCShop/><PCUnlimitedX/><PCNetflix/>
-    </div>
-    <HC5G/>
-    <HCiPhone11/>
-    <HCHomepack4G/>
-    <HCmyPannorApp/>
-    <PopularPhones/>
-    <DeliveryOptions/>
-    <Footer/>
-  </div>;
+  );
 }
 
 export default Home;

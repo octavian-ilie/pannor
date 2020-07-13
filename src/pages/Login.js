@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import { Card, Form, Title, Text, Input, Button } from '../components/AuthForms';
 import './Login.css';
@@ -15,6 +16,8 @@ const SignUpLink = styled(Link)`
 `;
 
 function Login() {
+  document.title = defaultTitle + 'Sign in';
+
   return (
     <div className="login-container">
       <Card>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import './NotFound.css';
 
@@ -13,6 +14,8 @@ const InlineLink = styled(Link)`
 `;
 
 function NotFound() {
+  document.title = defaultTitle + 'Whoops...'
+
   return (
     <div className="notfound-container">
       <div className="notfound-wrapper">
