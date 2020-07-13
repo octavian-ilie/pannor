@@ -31,7 +31,7 @@ const NavLink = styled(Link)`
   margin-right: 20px;
   transition: all 0.2s ease-in-out;
 
-  :hover {
+  &:hover {
     color: #fa7268;
   }
 `;
@@ -41,7 +41,7 @@ const HeaderIconLink = styled(Link)`
   margin-top: -14px;
   margin-left: 14px;
 
-  :hover {
+  &:hover {
     color: #fa7268;
   }
 `;
