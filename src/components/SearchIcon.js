@@ -12,6 +12,8 @@ const Svg = styled(Icon)`
     height: 32px;
     width: 32px;
     margin-right: -10px;
+    user-select: none;
+    -webkit-tap-highlight-color:  rgba(0, 0, 0, 0); 
   }
 `;
 

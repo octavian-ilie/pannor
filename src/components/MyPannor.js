@@ -11,6 +11,8 @@ const Svg = styled(Icon)`
   @media ${device.laptop} { 
     height: 32px;
     width: 32px;
+    user-select: none;
+    -webkit-tap-highlight-color:  rgba(0, 0, 0, 0); 
   }
 `;
 
