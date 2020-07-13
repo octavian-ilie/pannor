@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PrivBusLink from './HeaderLinks';
-import './Header.css';
 import logo from '../img/pannor-logo-transparent_new.png';
 import { MyPannor } from './MyPannor';
 import { SearchIcon } from './SearchIcon';
