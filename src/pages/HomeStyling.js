@@ -1,4 +1,6 @@
-.home-wrapper {
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -6,25 +8,25 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
-}
+`;
 
-.home-container {
+const Container = styled.div`
   width: 1170px;
   height: 500px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
+`;
 
-.home-slider-container {
+const Slider = styled.div`
   max-width: 1400px;
   height: auto;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
+`;
 
-.home-fast-access-container {
+const FastAccess = styled.div`
   width: 1170px;
   height: auto;
   padding: 40px 0;
@@ -32,13 +34,15 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
-}
+`;
 
-.promo-cards-container {
+const PromoCards = styled.div`
   width: 1170px;
   height: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
-}
+`;
+
+export { Wrapper, Container, Slider, FastAccess, PromoCards };

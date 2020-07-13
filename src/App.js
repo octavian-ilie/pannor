@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from 'styled-components';
 import PrivateRoute from './PrivateRoute';
 import Header from './components/Header';
 import Login from "./pages/Login";
@@ -8,14 +9,19 @@ import Home from './pages/Home';
 import Overview from './pages/Overview';
 import NotFound from './pages/NotFound';
 import { AuthContext } from "./context/auth";
-import './App.css';
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
 function App(props) {
   return (
     <AuthContext.Provider value={false}>
       <Router>
         <Header/>
-        <div className="app-container">
+        <Container>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/my" component={Login} />
@@ -26,7 +32,7 @@ function App(props) {
               <NotFound/>
             </Route>
           </Switch>
-        </div>
+        </Container>
       </Router>
     </AuthContext.Provider>
   );

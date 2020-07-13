@@ -1,8 +1,8 @@
 import React from "react";
-import './Home.css';
 import { useEffect } from 'react';
 import loadjs from 'loadjs';
 import defaultTitle from '../rules/defaultTitle';
+import { Wrapper, Slider, FastAccess, PromoCards } from './HomeStyling';
 import HomeSlider from '../components/HomeSlider';
 import FAPayInvoice from '../components/FAPayInvoice';
 import FATopUp from '../components/FATopUp';
@@ -34,20 +34,20 @@ function Home(props) {
   });
 
   return (
-    <div className="home-wrapper">
-      <div className="home-slider-container">
+    <Wrapper>
+      <Slider>
         <HomeSlider></HomeSlider>
-      </div>
-      <div className="home-fast-access-container">
+      </Slider>
+      <FastAccess>
         <FAPayInvoice/>
         <FATopUp/>
         <FAChangePlan/>
         <FAPannorCloud/>
         <FAEmergency/>
-      </div>
-      <div className="promo-cards-container">
+      </FastAccess>
+      <PromoCards>
         <PCShop/><PCUnlimitedX/><PCNetflix/>
-      </div>
+      </PromoCards>
       <HC5G/>
       <HCiPhone11/>
       <HCHomepack4G/>
@@ -55,7 +55,7 @@ function Home(props) {
       <PopularPhones/>
       <DeliveryOptions/>
       <Footer/>
-    </div>
+    </Wrapper>
   );
 }
 
