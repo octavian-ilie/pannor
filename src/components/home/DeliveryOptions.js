@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../rules/device';
 import Icon from '../Icon';
 
 const Container = styled.div`
@@ -10,6 +11,16 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  @media ${device.bp1} {
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-evenly;
+  }
+
+  @media ${device.tablet} {
+    flex-wrap: wrap;
+  }
 `;
 
 const Box = styled.div`

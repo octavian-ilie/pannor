@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { device } from '../../rules/device';
 import styled from 'styled-components';
 import samsung_galaxy_s20 from '../../img/samsung_galaxy_s20.png';
 import iphone_11_pro from '../../img/iphone_11pro_gold_airpods.png';
@@ -9,6 +10,14 @@ const Container = styled.div`
   width: 1170px;
   height: auto;
   margin-top: 4rem;
+
+  @media ${device.bp1} { 
+    width: 100%;
+  }
+  
+  @media ${device.tablet} { 
+    margin-top: 1rem;
+  }
 `;
 
 const GrayCard = styled.div`
@@ -35,6 +44,10 @@ const PhonesContainer = styled.div`
   flex-wrap: nowrap;
   justify-content: space-evenly;
   padding: 1rem 0;
+
+  @media ${device.tablet} { 
+    flex-direction: column;
+  }
 `;
 
 const PhoneBox = styled.div`
@@ -43,6 +56,11 @@ const PhoneBox = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+
+  @media ${device.tablet} { 
+    align-self: center;
+    margin-bottom: 4rem;
+  }
 `;
 
 const Image = styled.img`
@@ -86,6 +104,10 @@ const SeeAll = styled(Link)`
 
   &:hover {
     color: #fa7268;
+  }
+
+  @media ${device.tablet} { 
+    margin-top: -2rem;
   }
 `;
 
