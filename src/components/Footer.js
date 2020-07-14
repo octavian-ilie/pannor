@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { device } from '../rules/device';
 import styled from 'styled-components';
 import Icon from './Icon';
 import Facebook from './icons/social/Facebook';
@@ -21,11 +22,24 @@ const Container = styled.div`
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
+
+  @media ${device.bp1} {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  @media ${device.tablet} {
+    padding: 2rem 0;
+  }
 `;
 
 const LogoRow = styled.div`
   width: 100%;
   margin-bottom: 1rem;
+
+  @media ${device.tablet} {
+    text-align: center;
+  }
 `;
 
 const NavRow = styled.div`
@@ -35,6 +49,10 @@ const NavRow = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const Svg = styled(Icon)` 
@@ -59,6 +77,14 @@ const PannorSymbol = ({ className }) => (
 
 const NavColumn = styled.div`
   width: 22%;
+
+  @media ${device.tablet} {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 `;
 
 const NavTitle = styled.div`
@@ -78,6 +104,11 @@ const NavLink = styled(Link)`
   &:hover {
     color: #222;
   }
+
+  @media ${device.tablet} {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const MediaRow = styled.div`
@@ -88,6 +119,12 @@ const MediaRow = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem 0;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
 `;
 
 const LogoText = styled.div`
@@ -95,6 +132,10 @@ const LogoText = styled.div`
   font-size: 2rem;
   color: #222;
   letter-spacing: -1px;
+
+  @media ${device.tablet} {
+    margin-bottom: 1rem;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -110,12 +151,20 @@ const CopyRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 16px 0;  
+  padding: 16px 0;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const Copyright = styled.div`
   color: #555;
   font-size: 0.9rem;
+
+  @media ${device.tablet} {
+    align-self: center;
+  }
 `;
 
 const Cookies = styled(Link)`
@@ -125,6 +174,12 @@ const Cookies = styled(Link)`
 
   &:hover {
     color: #222;
+  }
+
+  @media ${device.tablet} {
+    order: -1;
+    align-self: center;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -136,6 +191,11 @@ const SocialLink = styled.a`
 
   &:hover {
     color: #222;
+  }
+
+  @media ${device.tablet} {
+    margin: 0 5px;
+    padding: 0 5px;
   }
 `;
 
