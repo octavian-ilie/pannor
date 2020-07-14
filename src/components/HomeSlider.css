@@ -41,11 +41,19 @@
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+
 @media only screen and (max-width: 1000px) {
   .slider {
     height: 80vh;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .slider {
+    height: 300px;
+  }
+}
+
 .slider .box {
   height: 100%;
   width: 100%;
@@ -59,7 +67,7 @@
 @media only screen and (max-width: 650px) {
   .slider .box {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 }
 .slider .box .bg {
@@ -85,7 +93,7 @@
     width: 100%;
     left: 0;
     bottom: 0;
-    height: 54%;
+    height: 100%;
     -webkit-transform: skewX(0deg);
             transform: skewX(0deg);
   }
@@ -122,9 +130,9 @@
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
     text-align: center;
-    padding: 2rem;
-    -webkit-transform: translateY(-9rem);
-            transform: translateY(-9rem);
+    padding: 1rem;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
 }
 .slider .box .details h1 {
@@ -145,6 +153,17 @@
   margin-bottom: 2rem;
   margin-right: 5rem;
 }
+
+@media only screen and (max-width: 650px) {
+  .slider .box .details h1 {
+    font-size: 2rem;
+  }
+
+  .slider .box .details p {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .slider .box .details p {
     margin-right: 0;
@@ -311,8 +330,10 @@
 
 @media only screen and (max-width: 650px) {
   .trail {
-    width: 90%;
-    bottom: 13%;
+    width: 94%;
+    bottom: 4%;
+    font-size: 0.8rem;
+    display: none;
   }
 }
 .trail div {

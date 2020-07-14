@@ -20,7 +20,12 @@ const PrivBusWrapper = styled.div`
   flex-direction: row;
   
   @media ${device.laptopL} { 
-    max-width: 1000px;
+    width: 1170px;
+  }
+
+  @media ${device.bp1} { 
+    width: 100%;
+    padding: 0 1rem;
   }
   
   @media ${device.laptop} { 
@@ -64,7 +69,13 @@ const HeaderWrapper = styled.div`
   padding-bottom: 20px;
 
   @media ${device.laptopL} { 
-    max-width: 1000px;
+    width: 1170px;
+  }
+
+  @media ${device.bp1} { 
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   @media ${device.laptop} { 
