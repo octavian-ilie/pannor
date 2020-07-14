@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from '../rules/device';
 
 const PromoCard = styled.div`
   min-height: 300px;
   width: 350px;
   display: flex;
   flex-direction: column;
+
+  @media ${device.tablet} { 
+    width: 100%;
+    margin-bottom: 40px;
+  }
 `;
 
 const Title = styled.div`

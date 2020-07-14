@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { PromoCard, Title, Text, PromoLink } from './HomepagePromoCards';
 import img from '../img/netflix_homepage-promo.jpg';
+import { device } from '../rules/device';
 
 const Image = styled.div`
   height: 230px;
@@ -9,6 +10,10 @@ const Image = styled.div`
   background: url(${img}) no-repeat bottom center/cover;
   background-size: 120%;
   margin-bottom: 2rem;
+
+  @media ${device.tablet} { 
+    background-size: 100%;
+  }
 `;
 
 function PCNetflix() {

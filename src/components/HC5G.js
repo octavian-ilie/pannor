@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, GrayCard, CardInfoContainer, Title, Text, Go } from './HomepageCards';
+import { device } from '../rules/device';
 import img from '../img/man_holding-laptop.jpg';
 
 const Image = styled.div`
   height: 100%;
   width: 50%;
   background: url(${img}) no-repeat top center/cover;
+
+  @media ${device.tablet} { 
+    height: 300px;
+    width: 100%;
+    order: -1;
+    background-position: center;
+  }
 `;
 
 function HC5G() {

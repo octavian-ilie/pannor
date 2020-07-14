@@ -48,6 +48,7 @@ const FastAccess = styled.div`
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    margin-bottom: 6px;
   }
 `;
 
@@ -58,6 +59,19 @@ const PromoCards = styled.div`
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
+
+  @media ${device.bp1} { 
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  @media ${device.laptop} { 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: -2rem;
+  }
 `;
 
 export { Wrapper, Container, Slider, FastAccess, PromoCards };

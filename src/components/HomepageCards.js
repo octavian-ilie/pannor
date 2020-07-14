@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from '../rules/device';
 
 const Container = styled.div`
   width: 1170px;
   height: auto;
   margin-top: 54px;
+
+  @media ${device.bp1} { 
+    width: 100%;
+  }
+
+  @media ${device.tablet} { 
+    margin-top: 2rem;
+  }
 `;
   
 const GrayCard = styled.div`
@@ -14,6 +23,11 @@ const GrayCard = styled.div`
   flex-wrap: nowrap;
   flex-direction: row;
   background-color: #f5f5f5;
+
+  @media ${device.tablet} { 
+    height: auto;
+    flex-direction: column;
+  }
 `;
 
 const WhiteCard = styled.div`
@@ -23,6 +37,11 @@ const WhiteCard = styled.div`
   flex-wrap: nowrap;
   flex-direction: row;
   background-color: #fff;
+
+  @media ${device.tablet} { 
+    height: auto;
+    flex-direction: column;
+  }
 `;
 
 const HueCard = styled.div`
@@ -42,6 +61,11 @@ const CardInfoContainer = styled.div`
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 2rem;
+
+  @media ${device.tablet} { 
+    padding: 2rem 1rem;
+    width: 100%;
+  }
 `;
 
 const Title = styled.div`
@@ -63,11 +87,19 @@ const Go = styled(Link)`
   &:hover {
     color: #fa7268;
   }
+
+  @media ${device.tablet} { 
+    margin-top: 2rem;
+  }
 `;
 
 const AppsContainer = styled.div`
   display: flex;
   margin-bottom: -16px;
+
+  @media ${device.tablet} { 
+    margin-top: 2rem;
+  }
 `;
 
 export { Container, GrayCard, WhiteCard, HueCard, CardInfoContainer, Title, Text, Go, AppsContainer };

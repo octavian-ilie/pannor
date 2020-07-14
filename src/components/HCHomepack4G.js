@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, GrayCard, CardInfoContainer, Title, Text, Go } from './HomepageCards';
+import { device } from '../rules/device';
 import img from '../img/homepack-4g_box.png';
 
 const Image = styled.div`
@@ -8,6 +9,13 @@ const Image = styled.div`
   width: 50%;
   background: url(${img}) no-repeat center center/cover;
   background-size: 80%;
+
+  @media ${device.tablet} { 
+    height: 300px;
+    width: 100%;
+    order: -1;
+    background-position: center;
+  }
 `;
 
 function HCHomepack4G() {
