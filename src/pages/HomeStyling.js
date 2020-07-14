@@ -39,6 +39,16 @@ const FastAccess = styled.div`
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
+
+  @media ${device.bp1} { 
+    width: 100%;
+  }
+
+  @media ${device.laptop} { 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 `;
 
 const PromoCards = styled.div`

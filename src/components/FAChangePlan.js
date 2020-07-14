@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Icon from '../components/Icon';
+import { device } from '../rules/device';
 
 const FAChangePlanContainer = styled(Link)`
   transition: all 0.2s ease;
@@ -16,6 +17,16 @@ const FAChangePlanContainer = styled(Link)`
   &:hover {
     color: #fa7268;
     background-color: #fff;
+  }
+
+  @media ${device.laptop} { 
+    &::after {
+      font-family: 'navIcons' !important;
+      font-weight: 800;
+      content: '\\e903';
+      position: absolute;
+      right: 12px;
+    }
   }
 `;
 

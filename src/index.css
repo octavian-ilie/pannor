@@ -187,6 +187,42 @@
        url("../src/fonts/Inter-BlackItalic.woff?v=3.13") format("woff");
 }
 
+@font-face {
+  font-family: 'navIcons';
+  src:  url('../src/fonts/navIcons.eot?dg2j9l');
+  src:  url('../src/fonts/navIcons.eot?dg2j9l#iefix') format('embedded-opentype'),
+        url('../src/fonts/navIcons.ttf?dg2j9l') format('truetype'),
+        url('../src/fonts/navIcons.woff?dg2j9l') format('woff'),
+        url('../src/fonts/navIcons.svg?dg2j9l#navIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nav-"], [class*=" nav-"] {
+  font-family: 'navIcons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-up:before {
+  content: "\e900";
+}
+.nav-left:before {
+  content: "\e901";
+}
+.nav-down:before {
+  content: "\e902";
+}
+.nav-right:before {
+  content: "\e903";
+}
+
 html {
   box-sizing: border-box;
 }
