@@ -137,3 +137,96 @@
               0 16px 32px rgba(0,0,0,0.02), 
               0 32px 64px rgba(0,0,0,0.02);
 }
+
+@media only screen and (max-width: 1195px) {
+  .notfound-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 1195px) {
+  .notfound--main-box {
+    background-position: top right;
+    background-size: cover;
+  }
+
+  .notfound--cs-box {
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 1125px) {
+  .notfound-container {
+    height: calc(100vh - 54px);
+  }
+
+  .main-box--text {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .notfound-wrapper {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .notfound--main-box {
+    align-self: stretch;
+    border-radius: 0;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .main-box--title {
+    color: #fff;
+  }
+
+  .main-box--text {
+    width: 60%;
+  }
+
+  .notfound--cs-box {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cs-box--button {
+    width: 186px;
+    display: inline-flex;
+  }
+
+  .notfound--report-box {
+    height: 160px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .notfound--main-box {
+    padding: 1rem;
+  }
+
+  .cs-box--button {
+    width: 100%;
+  }
+
+  .notfound--cs-box {
+    background-position: top;
+    padding: 1rem;
+  }
+
+  .notfound--report-box {
+    padding: 1rem;
+    height: 200px;
+    background-size: 110%;
+    background-position: 100% 50%;
+  }
+
+  .report-box--text {
+    margin-top: 5rem;
+  }
+}
