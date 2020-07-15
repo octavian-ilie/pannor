@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Overview from './pages/Overview';
 import NotFound from './pages/NotFound';
+import Business from './pages/Business';
 import { AuthContext } from "./context/auth";
 
 const Container = styled.div`
@@ -26,6 +27,7 @@ function App(props) {
             <Route exact path="/" component={Home} />
             <Route exact path="/my" component={Login} />
             <Route path="/my/signup" component={Signup} />
+            <Route path="/business" component={Business} />
             <PrivateRoute path="/overview" component={Overview} />
             <PrivateRoute path="/my/plan" component={Overview} />
             <Route path="*">
