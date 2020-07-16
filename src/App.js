@@ -19,7 +19,7 @@ const Container = styled.div`
 
 function App(props) {
   return (
-    <AuthContext.Provider value={false}>
+    <AuthContext.Provider value={true}>
       <Router>
         <Header/>
         <Container>
@@ -28,7 +28,7 @@ function App(props) {
             <Route exact path="/my" component={Login} />
             <Route path="/my/signup" component={Signup} />
             <Route path="/business" component={Business} />
-            <PrivateRoute path="/overview" component={Overview} />
+            <PrivateRoute path="/my/overview" component={Overview} />
             <PrivateRoute path="/my/plan" component={Overview} />
             <Route path="*">
               <NotFound/>

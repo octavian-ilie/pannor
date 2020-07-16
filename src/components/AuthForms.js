@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../rules/device';
+import { Link } from 'react-router-dom';
 
 const Card = styled.div`
   box-sizing: border-box;
@@ -70,7 +71,7 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   background: #222;
   border: 0;
   border-radius: 3px;
@@ -86,6 +87,8 @@ const Button = styled.button`
   font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: #fa7268;
