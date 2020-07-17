@@ -12,11 +12,11 @@ const Background = styled.div`
   background-color: #f5f5f5;
 `;
 
-const Container = styled.div`
+const HeaderContainer = styled.div`
   width: 1170px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const Title = styled.div`
@@ -24,6 +24,18 @@ const Title = styled.div`
   font-size: 2rem;
   color: #222;
   padding: 4rem 0;
+`;
+
+const ChooseNumber = styled.select`
+  height: 60px;
+  width: 160px;
+  outline: none;
+  align-self: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  color: #222;
 `;
 
 function Overview(props) {
@@ -41,11 +53,19 @@ function Overview(props) {
 
   return (
     <Background>
-      <Container>
+      <HeaderContainer>
         <Title>
           {persGreeting}userName
         </Title>
-      </Container>
+        <ChooseNumber>
+          <option>
+            0788123456
+          </option>
+          <option>
+            0788000111
+          </option>
+          </ChooseNumber>
+      </HeaderContainer>
     </Background>
   );
 }
