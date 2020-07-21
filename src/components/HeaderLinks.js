@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const PrivBusLink = styled(Link)`
+const PrivBusLink = styled(NavLink)`
   text-decoration: none;
-  color: #333;
+  color: #888;
   font-size: 0.9rem;
   padding: 10px 16px 10px 0;
   transition: all 0.2s ease-in-out;
@@ -15,6 +15,10 @@ const PrivBusLink = styled(Link)`
 
   &:hover {
     color: #fa7268;
+  }
+
+  &.active {
+    color: #333;
   }
 `;
 

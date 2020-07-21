@@ -11,8 +11,8 @@ function Header() {
   return (
     <HeaderContainer>
       <PrivBusWrapper>
-        <PrivBusLink to="/">Private</PrivBusLink>
-        <PrivBusLink to="/business">Business</PrivBusLink>
+        <PrivBusLink exact to="/">Private</PrivBusLink>
+        <PrivBusLink exact to="/business">Business</PrivBusLink>
       </PrivBusWrapper>
       <HeaderWrapper>
         <NavContainer>

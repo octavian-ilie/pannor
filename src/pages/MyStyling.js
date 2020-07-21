@@ -23,6 +23,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 4rem;
 `;
 
@@ -73,7 +74,7 @@ const ChooseNumber = styled.div`
 
 const Navigation = styled.div`
   width: 20%;
-  height: 800px;
+  height: auto;
   background-color: #fff;
   border-radius: 3px;
   display: flex;

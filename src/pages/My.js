@@ -14,6 +14,12 @@ import {
 } from './MyStyling';
 import OverviewLink from '../components/my/nav/OverviewLink';
 import ResourcesLink from '../components/my/nav/ResourcesLink';
+import InvoicesLink from '../components/my/nav/InvoicesLink';
+import PlansLink from '../components/my/nav/PlansLink';
+import ServicesLink from '../components/my/nav/ServicesLink';
+import ThankYouLink from '../components/my/nav/ThankYouLink';
+import EmergenciesLink from '../components/my/nav/EmergenciesLink';
+import SettingsLink from '../components/my/nav/SettingsLink';
 
 function Overview(props) {
   const userName = 'Octavian';
@@ -44,6 +50,12 @@ function Overview(props) {
         <Navigation>
           <OverviewLink/>
           <ResourcesLink/>
+          <InvoicesLink/>
+          <PlansLink/>
+          <ServicesLink/>
+          <ThankYouLink/>
+          <EmergenciesLink/>
+          <SettingsLink/>
         </Navigation>
         <Content>
               <PrivateRoute exact path="/my" component={Summary}/>
