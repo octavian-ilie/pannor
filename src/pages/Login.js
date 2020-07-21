@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import { Card, Form, Title, Text, Input, Button } from '../components/AuthForms';
@@ -37,26 +37,32 @@ const SignUpLink = styled(Link)`
   }
 `;
 
-function Login() {
+function Login(props) {
+  if (props.signedin === true) {
+    return (
+      <Redirect to="/my"/>
+      )
+    }
+    
   document.title = defaultTitle + 'Sign in';
 
   return (
-    <Container>
-      <Card>
-        <Title>
-          Sign in to your account
-        </Title>
-        <Text>
-          Fill in your username or your Pannor phone number and your password to continue.
-        </Text>
-        <Form>
-          <Input type="text" placeholder="username"/>
-          <Input type="password" placeholder="password" />
-          <Button to="/my">Continue</Button>
-        </Form>
-        <SignUpLink to="/signup">Don't have an account yet? Let's create one.</SignUpLink>
-      </Card>
-    </Container>
+      <Container>
+        <Card>
+          <Title>
+            Sign in to your account
+          </Title>
+          <Text>
+            Fill in your username or your Pannor phone number and your password to continue.
+          </Text>
+          <Form>
+            <Input type="text" placeholder="username"/>
+            <Input type="password" placeholder="password" />
+            <Button to="/my">Continue</Button>
+          </Form>
+          <SignUpLink to="/signup">Don't have an account yet? Let's create one.</SignUpLink>
+        </Card>
+      </Container>
   );
 }
 

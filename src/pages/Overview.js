@@ -2,7 +2,6 @@ import React from "react";
 import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from '../PrivateRoute';
 import Summary from '../components/my/Summary';
 import Resources from '../components/my/Resources';
@@ -97,7 +96,9 @@ const Content = styled.div`
 `;
 
 function Overview(props) {
-  document.title = defaultTitle + 'My overview';
+  const userName = 'Octavian';
+  const currentNo = '0788123456'
+  document.title = defaultTitle + 'Welcome, ' + userName;
 
   const date = new Date();
   const time = date.getHours();
@@ -108,9 +109,6 @@ function Overview(props) {
   } else if (time >= 12 && time < 18) {
     persGreeting = 'Good afternoon, ';
   } else persGreeting = 'Good evening, ';
-
-  const userName = 'Octavian';
-  const currentNo = '0788123456'
 
   return (
     <Background>

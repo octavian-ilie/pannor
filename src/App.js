@@ -19,23 +19,32 @@ const Container = styled.div`
 
 function App(props) {
   return (
+    // Change value to true/false to simulate authentication
     <AuthContext.Provider value={true}>
-      <Router>
-        <Header/>
-        <Container>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/signin" component={Login} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/business" component={Business} />
-            <PrivateRoute path="/my" component={Overview} />
-            <PrivateRoute path="/my/plan" component={Overview} />
-            <Route path="*">
-              <NotFound/>
-            </Route>
-          </Switch>
-        </Container>
-      </Router>
+      <AuthContext.Consumer>
+        {signedin => (
+          <Router>
+            <Header/>
+            <Container>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/signin"
+                  render={(props) => (
+                    <Login {...props} signedin={signedin} />
+                  )}
+                />
+                <Route path="/signup" component={Signup} />
+                <Route path="/business" component={Business} />
+                <PrivateRoute path="/my" component={Overview} />
+                <PrivateRoute path="/my/plan" component={Overview} />
+                <Route path="*">
+                  <NotFound/>
+                </Route>
+              </Switch>
+            </Container>
+          </Router>
+        )}
+      </AuthContext.Consumer>
     </AuthContext.Provider>
   );
 }
