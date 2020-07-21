@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { 
-  BoxTitle 
+  BoxTitle,
+  BoxBottomLink,
 } from './BoxStyling';
 
 const Container = styled.div`
@@ -27,6 +28,9 @@ function Resources() {
       <BoxTitle>
         Resources and consumption
       </BoxTitle>
+      <BoxBottomLink to="/my/resources">
+        Details
+      </BoxBottomLink>
     </Container>
   )
 }
