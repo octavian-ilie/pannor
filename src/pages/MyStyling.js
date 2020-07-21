@@ -1,10 +1,4 @@
-import React from "react";
-import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import PrivateRoute from '../PrivateRoute';
-import Summary from '../components/my/Summary';
-import Resources from '../components/my/Resources';
 
 const Background = styled.div`
   width: 100%;
@@ -82,6 +76,8 @@ const Navigation = styled.div`
   height: 800px;
   background-color: #fff;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 1px 2px rgba(0,0,0,0.015),
               0 2px 4px rgba(0,0,0,0.015),
               0 4px 8px rgba(0,0,0,0.015),
@@ -95,43 +91,4 @@ const Content = styled.div`
   height: 800px;
 `;
 
-function Overview(props) {
-  const userName = 'Octavian';
-  const currentNo = '0788123456'
-  document.title = defaultTitle + 'Welcome, ' + userName;
-
-  const date = new Date();
-  const time = date.getHours();
-  let persGreeting = '';
-
-  if (time >= 6 && time < 12) {
-    persGreeting = 'Good morning, ';
-  } else if (time >= 12 && time < 18) {
-    persGreeting = 'Good afternoon, ';
-  } else persGreeting = 'Good evening, ';
-
-  return (
-    <Background>
-      <HeaderContainer>
-        <Title>
-          {persGreeting}{userName}
-        </Title>
-        <ChooseNumber>
-          {currentNo}
-        </ChooseNumber>
-      </HeaderContainer>
-      <AppContainer>
-        <Navigation>
-          <Link to="/my">Overview</Link>
-          <Link to="/my/resources">Resources</Link>
-        </Navigation>
-        <Content>
-              <PrivateRoute exact path="/my" component={Summary}/>
-              <PrivateRoute path="/my/resources" component={Resources}/>
-        </Content>
-      </AppContainer>
-    </Background>
-  );
-}
-
-export default Overview;
+export { Background, HeaderContainer, AppContainer, Title, ChooseNumber, Navigation, Content };

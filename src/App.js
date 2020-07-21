@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-import Overview from './pages/Overview';
+import Overview from './pages/My';
 import NotFound from './pages/NotFound';
 import Business from './pages/Business';
 import { AuthContext } from "./context/auth";

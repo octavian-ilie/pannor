@@ -56,7 +56,7 @@ function Signup() {
           <Input type="email" placeholder="E-mail"/>
           <Input type="password" placeholder="New password" />
           <Input type="password" placeholder="Confirm password" />
-          <Button>Continue</Button>
+          <Button to="/">Continue</Button>
         </Form>
         <SignInLink to="/signin">Already have an account? Sign in.</SignInLink>
       </Card>
