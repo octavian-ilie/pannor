@@ -52,9 +52,9 @@ function Login() {
         <Form>
           <Input type="text" placeholder="username"/>
           <Input type="password" placeholder="password" />
-          <Button to="/my/overview">Continue</Button>
+          <Button to="/my">Continue</Button>
         </Form>
-        <SignUpLink to="/my/signup">Don't have an account yet? Let's create one.</SignUpLink>
+        <SignUpLink to="/signup">Don't have an account yet? Let's create one.</SignUpLink>
       </Card>
     </Container>
   );

@@ -1,6 +1,11 @@
 import React from "react";
 import defaultTitle from '../rules/defaultTitle';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PrivateRoute from '../PrivateRoute';
+import Summary from '../components/my/Summary';
+import Resources from '../components/my/Resources';
 
 const Background = styled.div`
   width: 100%;
@@ -119,10 +124,12 @@ function Overview(props) {
       </HeaderContainer>
       <AppContainer>
         <Navigation>
-
+          <Link to="/my">Overview</Link>
+          <Link to="/my/resources">Resources</Link>
         </Navigation>
         <Content>
-          
+              <PrivateRoute exact path="/my" component={Summary}/>
+              <PrivateRoute path="/my/resources" component={Resources}/>
         </Content>
       </AppContainer>
     </Background>

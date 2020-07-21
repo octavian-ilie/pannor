@@ -25,10 +25,10 @@ function App(props) {
         <Container>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/my" component={Login} />
-            <Route path="/my/signup" component={Signup} />
+            <Route exact path="/signin" component={Login} />
+            <Route path="/signup" component={Signup} />
             <Route path="/business" component={Business} />
-            <PrivateRoute path="/my/overview" component={Overview} />
+            <PrivateRoute path="/my" component={Overview} />
             <PrivateRoute path="/my/plan" component={Overview} />
             <Route path="*">
               <NotFound/>

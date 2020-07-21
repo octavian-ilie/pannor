@@ -34,7 +34,7 @@ function Header() {
           <HeaderIconLink to="/search">
             <SearchIcon/>
           </HeaderIconLink>
-          <HeaderIconLink to="/my">
+          <HeaderIconLink to="/signin">
             <MyPannor/>
           </HeaderIconLink>
         </IconsContainer>

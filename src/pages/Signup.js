@@ -58,7 +58,7 @@ function Signup() {
           <Input type="password" placeholder="Confirm password" />
           <Button>Continue</Button>
         </Form>
-        <SignInLink to="/my">Already have an account? Sign in.</SignInLink>
+        <SignInLink to="/signin">Already have an account? Sign in.</SignInLink>
       </Card>
     </Container>
   );
