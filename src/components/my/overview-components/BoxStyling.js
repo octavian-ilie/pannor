@@ -17,11 +17,13 @@ const BoxBottomLink = styled(Link)`
   text-decoration: none;
   color: #888;
   transition: all 0.2s ease-in-out;
-  border-top: 1px solid #f3f3f3;
+  border-top: 1px solid #eaeaea;
   position: relative;
+  background-color: #fcfcfc;
 
   &:hover {
     color: #222;
+    background-color: #fff;
   }
 
   &::after {
