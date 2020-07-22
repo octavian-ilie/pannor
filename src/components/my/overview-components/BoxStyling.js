@@ -36,6 +36,7 @@ const BoxBottomLink = styled(Link)`
   border-top: 1px solid #eaeaea;
   position: relative;
   background-color: #fcfcfc;
+  margin-top: 0.6rem;
 
   &:hover {
     color: #222;

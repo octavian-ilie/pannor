@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "loadjs": "^4.2.0",
     "react": "^16.13.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-content-loader": "^5.1.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
