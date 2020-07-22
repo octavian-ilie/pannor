@@ -1,6 +1,22 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+const Container = styled.div`
+  height: auto;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.015),
+              0 2px 4px rgba(0,0,0,0.015),
+              0 4px 8px rgba(0,0,0,0.015),
+              0 8px 16px rgba(0,0,0,0.015),
+              0 16px 32px rgba(0,0,0,0.015),
+              0 32px 64px rgba(0,0,0,0.015);
+`;
+
 const BoxTitle = styled.div`
   font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #666;
@@ -35,4 +51,4 @@ const BoxBottomLink = styled(Link)`
   }
 `;
 
-export { BoxTitle, BoxBottomLink };
+export { Container, BoxTitle, BoxBottomLink };
