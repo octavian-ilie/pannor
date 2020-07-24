@@ -11,7 +11,7 @@ const Go = styled(NavLink)`
   flex-direction: row;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid #eaeaea;
   background-color: #fcfcfc;
 
   &:hover {
