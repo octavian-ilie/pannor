@@ -14,7 +14,7 @@ const PrivBusLink = styled(NavLink)`
   }
 
   &:hover {
-    color: #fa7268;
+    color: #222;
   }
 
   &.active {
