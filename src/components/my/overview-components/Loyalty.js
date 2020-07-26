@@ -36,7 +36,7 @@ const TotalBox = styled.div`
 const SecondaryValue = styled.div`
   font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #222;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 `;
 
 const TotalValue = styled.div`
