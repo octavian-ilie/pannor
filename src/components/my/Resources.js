@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import {
   Wrapper,
   SectionTitle,
@@ -27,6 +29,40 @@ const Internet = styled(Container)`
   margin-top: 1rem;
 `;
 
+const CircularContent = styled.div`
+  padding: 0 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+  justify-items: space-evenly;
+`;
+
+const circularStyle = {
+  root: {},
+  path: {
+    stroke: '#fa7268',
+  },
+  trail: {
+    stroke: '#f5f5f5',
+    strokeLinecap: 'butt',
+  },
+  text: {
+    fill: '#222',
+    fontSize: '1rem',
+    fontFamily: 'Octavian Regular',
+  },
+}
+
+// Mock data, to be fetched later
+const availableNatMins = 2000;
+const remainingNatMins = 1092;
+
+const availableIntlMins = 150;
+const remainingIntMins = 27;
+
+const availableInternet = 5;
+const remainingInternet = 3.9;
+
 function Resources(props) {
   return (
     <Wrapper>
@@ -41,11 +77,33 @@ function Resources(props) {
           <BoxTitle>
             Minutes
           </BoxTitle>
+          <CircularContent>
+            <CircularProgressbar
+              value={remainingNatMins}
+              maxValue={availableNatMins}
+              text={`${remainingNatMins} min`}
+              styles={circularStyle}
+            />
+            <CircularProgressbar
+              value={remainingIntMins}
+              maxValue={availableIntlMins}
+              text={`${remainingIntMins} min`}
+              styles={circularStyle}
+            />
+          </CircularContent>
         </Minutes>
         <Internet>
           <BoxTitle>
             Internet
           </BoxTitle>
+          <CircularContent>
+            <CircularProgressbar
+              value={remainingInternet}
+              maxValue={availableInternet}
+              text={`${remainingInternet} GB`}
+              styles={circularStyle}
+            />
+          </CircularContent>
         </Internet>
       </ResourcesContent>
     </Wrapper>
