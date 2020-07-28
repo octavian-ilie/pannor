@@ -1,8 +1,7 @@
 import React from "react";
 import defaultTitle from '../rules/defaultTitle';
 import PrivateRoute from '../PrivateRoute';
-import Summary from '../components/my/Summary';
-import Resources from '../components/my/Resources';
+
 import { 
   Background, 
   HeaderContainer, 
@@ -12,6 +11,7 @@ import {
   Navigation, 
   Content 
 } from './MyStyling';
+
 import OverviewLink from '../components/my/nav/OverviewLink';
 import ResourcesLink from '../components/my/nav/ResourcesLink';
 import InvoicesLink from '../components/my/nav/InvoicesLink';
@@ -20,6 +20,10 @@ import ServicesLink from '../components/my/nav/ServicesLink';
 import ThankYouLink from '../components/my/nav/ThankYouLink';
 import EmergenciesLink from '../components/my/nav/EmergenciesLink';
 import SettingsLink from '../components/my/nav/SettingsLink';
+
+import Summary from '../components/my/Summary';
+import Resources from '../components/my/Resources';
+import Invoices from '../components/my/Invoices';
 
 function Overview(props) {
   const userName = 'Octavian';
@@ -63,7 +67,14 @@ function Overview(props) {
                 path="/my"
                 component={Summary}
               />
-              <PrivateRoute path="/my/resources" component={Resources}/>
+              <PrivateRoute
+                path="/my/resources"
+                component={Resources}
+              />
+              <PrivateRoute
+                path="/my/invoices"
+                component={Invoices}
+              />
         </Content>
       </AppContainer>
     </Background>
