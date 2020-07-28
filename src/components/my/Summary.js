@@ -16,11 +16,28 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-function Summary() {
+// Mock data, to be fetched later
+const availableNatMins = 2000;
+const remainingNatMins = 1092;
+
+const availableIntlMins = 150;
+const remainingIntMins = 27;
+
+const availableInternet = 5;
+const remainingInternet = 3.9;
+
+function Summary(props) {
   return (
     <Container>
       <Payments/>
-      <Resources/>
+      <Resources
+        availableNatMins={availableNatMins}
+        remainingNatMins={remainingNatMins}
+        availableIntlMins={availableIntlMins}
+        remainingIntMins={remainingIntMins}
+        availableInternet={availableInternet}
+        remainingInternet={remainingInternet}
+      />
       <Loyalty/>
       <Plan/>
       <Phone/>

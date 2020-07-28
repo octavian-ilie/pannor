@@ -51,17 +51,7 @@ const circularStyle = {
   },
 }
 
-// Mock data, to be fetched later
-const availableNatMins = 2000;
-const remainingNatMins = 1092;
-
-const availableIntlMins = 150;
-const remainingIntMins = 27;
-
-const availableInternet = 5;
-const remainingInternet = 3.9;
-
-function Resources() {
+function Resources(props) {
   return (
     <Box>
       <BoxTitle>
@@ -69,21 +59,21 @@ function Resources() {
       </BoxTitle>
       <CircularContent>
         <CircularProgressbar
-          value={remainingNatMins}
-          maxValue={availableNatMins}
-          text={`${remainingNatMins} min`}
+          value={props.remainingNatMins}
+          maxValue={props.availableNatMins}
+          text={`${props.remainingNatMins} min`}
           styles={circularStyle}
         />
         <CircularProgressbar
-          value={remainingIntMins}
-          maxValue={availableIntlMins}
-          text={`${remainingIntMins} min`}
+          value={props.remainingIntMins}
+          maxValue={props.availableIntlMins}
+          text={`${props.remainingIntMins} min`}
           styles={circularStyle}
         />
         <CircularProgressbar
-          value={remainingInternet}
-          maxValue={availableInternet}
-          text={`${remainingInternet} GB`}
+          value={props.remainingInternet}
+          maxValue={props.availableInternet}
+          text={`${props.remainingInternet} GB`}
           styles={circularStyle}
         />
       </CircularContent>

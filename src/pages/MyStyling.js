@@ -89,7 +89,7 @@ const Navigation = styled.div`
 
 const Content = styled.div`
   width: 75%;
-  height: 800px;
+  height: auto;
 `;
 
 export { Background, HeaderContainer, AppContainer, Title, ChooseNumber, Navigation, Content };

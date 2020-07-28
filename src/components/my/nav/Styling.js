@@ -4,25 +4,26 @@ import Icon from '../../Icon';
 
 const Go = styled(NavLink)`
   transition: all 0.2s ease;
-  color: #888;
+  color: var(--secondary);
   text-decoration: none;
   font-size: 0.9rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
+  padding: 1.2rem 1rem 1rem 1rem;
   border-bottom: 1px solid #eaeaea;
   background-color: #fcfcfc;
 
   &:hover {
-    color: #222;
+    color: var(--main);
     background-color: #fff;
   }
 
   &.active {
-    color: #222;
+    color: var(--main);
     background-color: #fff;
     font-size: 1rem;
+    font-weight: 600;
   }
 `;
 

@@ -58,7 +58,11 @@ function Overview(props) {
           <SettingsLink/>
         </Navigation>
         <Content>
-              <PrivateRoute exact path="/my" component={Summary}/>
+              <PrivateRoute
+                exact
+                path="/my"
+                component={Summary}
+              />
               <PrivateRoute path="/my/resources" component={Resources}/>
         </Content>
       </AppContainer>
