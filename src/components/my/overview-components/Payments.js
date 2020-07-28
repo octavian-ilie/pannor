@@ -11,13 +11,19 @@ const Box = styled(Container)`
   width: 32%;
 `;
 
-function Payments() {
+function Payments(props) {
+
   return (
     <Box>
       <BoxTitle>
         Payments
       </BoxTitle>
-      <PaidInvoice/>
+      {(() => {
+        switch (props.userTotalDue) {
+          case 0: return <PaidInvoice/>;
+          default: return `Total due: ${props.userTotalDue}`;
+        }
+      })()}
       <BoxBottomLink to="/my/invoices">View invoices</BoxBottomLink>
     </Box>
   )

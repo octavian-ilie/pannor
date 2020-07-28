@@ -26,8 +26,11 @@ import Resources from '../components/my/Resources';
 import Invoices from '../components/my/Invoices';
 
 function Overview(props) {
+  // Hard-coded data, to be fetched later
   const userName = 'Octavian';
   const currentNo = '0788123456'
+  const userTotalDue = 0;
+
   document.title = defaultTitle + 'Welcome, ' + userName;
 
   const date = new Date();
@@ -66,6 +69,7 @@ function Overview(props) {
                 exact
                 path="/my"
                 component={Summary}
+                userTotalDue={userTotalDue}
               />
               <PrivateRoute
                 path="/my/resources"

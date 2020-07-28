@@ -29,7 +29,7 @@ const remainingInternet = 3.9;
 function Summary(props) {
   return (
     <Container>
-      <Payments/>
+      <Payments userTotalDue={props.userTotalDue}/>
       <Resources
         availableNatMins={availableNatMins}
         remainingNatMins={remainingNatMins}
