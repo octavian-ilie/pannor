@@ -41,7 +41,7 @@ const SecondaryValue = styled.div`
 
 const TotalValue = styled.div`
   font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #fa7268;
+  color: var(--pannor);
   font-size: 2rem;
 `;
 

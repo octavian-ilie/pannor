@@ -223,6 +223,11 @@
   content: "\e903";
 }
 
+:root {
+  --pannor: #fa7268;
+  --main: #222;
+}
+
 html {
   box-sizing: border-box;
 }

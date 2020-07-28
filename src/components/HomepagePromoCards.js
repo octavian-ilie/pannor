@@ -17,7 +17,7 @@ const PromoCard = styled.div`
 const Title = styled.div`
   font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2rem;
-  color: #fa7268;
+  color: var(--pannor);
   margin-bottom: 0.6rem;
 `;
 
@@ -29,7 +29,7 @@ const Text = styled.div`
 const PromoLink = styled(Link)`
   color: #fff;
   text-decoration: none;
-  background-color: #222;
+  background-color: var(--main);
   border-radius: 3px;
   font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 12px 16px 8px 16px;
@@ -37,14 +37,15 @@ const PromoLink = styled(Link)`
   position: relative;
 
   &:hover {
-    background-color: #fa7268;
+    background-color: var(--pannor);
   }
 
   &::after {
-    content: '>';
+    font-family: 'navIcons' !important;
+    font-weight: 600;
     position: absolute;
-    top: 11px;
-    right: 16px;
+    content: ' \\e903';
+    right: 10px;
     color: #fff;
   }
 `;
