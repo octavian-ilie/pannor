@@ -17,6 +17,7 @@ import ResourcesLink from '../components/my/nav/ResourcesLink';
 import InvoicesLink from '../components/my/nav/InvoicesLink';
 import PlansLink from '../components/my/nav/PlansLink';
 import ServicesLink from '../components/my/nav/ServicesLink';
+import YourSIM from '../components/my/nav/YourSIM';
 import ThankYouLink from '../components/my/nav/ThankYouLink';
 import EmergenciesLink from '../components/my/nav/EmergenciesLink';
 import SettingsLink from '../components/my/nav/SettingsLink';
@@ -45,9 +46,9 @@ function Overview(props) {
       })
   }, [setAppState, props.customerId]);
 
-  let currentNo;
-  let firstName;
-  let lastName;
+  let currentNo = '';
+  let firstName = '';
+  let lastName = '';
 
   if(appState.customer) {
     firstName = appState.customer[0].first_name;
@@ -83,6 +84,7 @@ function Overview(props) {
           <InvoicesLink/>
           <PlansLink/>
           <ServicesLink/>
+          <YourSIM/>
           <ThankYouLink/>
           <EmergenciesLink/>
           <SettingsLink/>
