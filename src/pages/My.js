@@ -12,6 +12,8 @@ import {
   Content 
 } from './MyStyling';
 
+import Footer from '../components/Footer';
+
 import OverviewLink from '../components/my/nav/OverviewLink';
 import ResourcesLink from '../components/my/nav/ResourcesLink';
 import InvoicesLink from '../components/my/nav/InvoicesLink';
@@ -108,6 +110,7 @@ function Overview(props) {
               />
         </Content>
       </AppContainer>
+      <Footer/>
     </Background>
   );
 }

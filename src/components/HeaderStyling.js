@@ -11,6 +11,8 @@ const HeaderContainer = styled.div`
   justify-content: center;
   transition: all 0.3s ease-in-out;
   border-bottom: 1px solid #dbdbdb;
+  position: relative;
+  z-index: 1;
 `;
 
 const PrivBusWrapper = styled.div`
@@ -49,6 +51,23 @@ const NavLink = styled(Link)`
   }
 `;
 
+const TriggerLink = styled.div`
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: #fa7268;
+  }
+
+  @media ${device.laptop} { 
+    display: none;
+  }
+`;
+
 const HeaderIconLink = styled(Link)`
   color: #222;
   margin-top: -14px;
@@ -67,6 +86,7 @@ const HeaderWrapper = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-bottom: 20px;
+  z-index: 2;
 
   @media ${device.laptopL} { 
     width: 1170px;
@@ -131,4 +151,4 @@ const IconsContainer = styled.div`
   }
 `;
 
-export { HeaderContainer, PrivBusWrapper, NavLink, HeaderIconLink, HeaderWrapper, NavContainer, LogoContainer, BrandLogo, IconsContainer };
+export { HeaderContainer, PrivBusWrapper, NavLink, TriggerLink, HeaderIconLink, HeaderWrapper, NavContainer, LogoContainer, BrandLogo, IconsContainer };

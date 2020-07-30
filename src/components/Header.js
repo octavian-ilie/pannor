@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderContainer, PrivBusWrapper, NavLink, HeaderIconLink, HeaderWrapper, NavContainer, LogoContainer, BrandLogo, IconsContainer } from './HeaderStyling';
+import { useOnClickOutside } from './hooks';
+
+import { 
+  HeaderContainer, 
+  PrivBusWrapper, 
+  NavLink,
+  TriggerLink,
+  HeaderIconLink, 
+  HeaderWrapper, 
+  NavContainer, 
+  LogoContainer, 
+  BrandLogo, 
+  IconsContainer 
+} from './HeaderStyling';
+
+import HeaderMobileMenu from './HeaderMobileMenu';
 import PrivBusLink from './HeaderLinks';
 import logo from '../img/pannor-logo-transparent_new.png';
 import { MyPannor } from './MyPannor';
 import { SearchIcon } from './SearchIcon';
+
 import './MobileMenu.css';
 
 function Header() {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
-    <HeaderContainer>
+    <HeaderContainer ref={node}>
       <PrivBusWrapper>
         <PrivBusLink exact to="/">Private</PrivBusLink>
         <PrivBusLink exact to="/business">Business</PrivBusLink>
@@ -17,7 +37,8 @@ function Header() {
       <HeaderWrapper>
         <NavContainer>
           <NavLink to="/shop">Shop</NavLink>
-          <NavLink to="/mobile">Mobile</NavLink>
+          {/* <NavLink to="/mobile">Mobile</NavLink> */}
+          <TriggerLink open={open} setOpen={setOpen} onClick={() => setOpen(!open)}>Mobile</TriggerLink>
           <NavLink to="/landline">Internet & TV</NavLink>
           <NavLink to="/support">Support</NavLink>
           <div id="menu-toggle">
@@ -39,6 +60,7 @@ function Header() {
           </HeaderIconLink>
         </IconsContainer>
       </HeaderWrapper>
+      <HeaderMobileMenu open={open} setOpen={setOpen}/>
     </HeaderContainer>
   )
 }

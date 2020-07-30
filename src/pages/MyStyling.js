@@ -7,7 +7,7 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   background-color: #f5f5f5;
 `;
 
@@ -25,6 +25,7 @@ const AppContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 4rem;
+  flex-grow: 1;
 `;
 
 const Title = styled.div`
