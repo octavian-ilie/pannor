@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import ResourcesCircular from './ResourcesCircular';
+
 import {
   Wrapper,
   SectionTitle,
   SectionDescription,
 } from './Styling';
+
 import {
   Container,
   BoxTitle,
@@ -37,33 +38,35 @@ const CircularContent = styled.div`
   justify-items: space-evenly;
 `;
 
-const circularStyle = {
-  root: {},
-  path: {
-    stroke: '#fa7268',
-  },
-  trail: {
-    stroke: '#f5f5f5',
-    strokeLinecap: 'butt',
-  },
-  text: {
-    fill: '#222',
-    fontSize: '1rem',
-    fontFamily: 'Octavian Regular',
-  },
-}
-
-// Mock data, to be fetched later
-const availableNatMins = 2000;
-const remainingNatMins = 1092;
-
-const availableIntlMins = 150;
-const remainingIntMins = 27;
-
-const availableInternet = 5;
-const remainingInternet = 3.9;
-
 function Resources(props) {
+  const [appState, setAppState] = useState({
+    loading: false,
+    resources: null,
+  });
+
+  useEffect(() => {
+    setAppState({ loading: true });
+    const apiUrl = `https://api.octavian.nl/pannor/resources/${props.customerId}`;
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((resources) => {
+        setAppState({ loading: false, resources: resources });
+      })
+  }, [setAppState, props.customerId]);
+
+  let minuteAllowances = [];
+  let internetAllowances = [];
+
+  if(appState.resources) {
+    appState.resources.forEach((resource) => {
+      if(resource.type === 'minutes') {
+        minuteAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} />);
+      } else if (resource.type === 'internet') {
+        internetAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} />);
+      }
+    })
+  }
+
   return (
     <Wrapper>
       <SectionTitle>
@@ -78,18 +81,7 @@ function Resources(props) {
             Minutes
           </BoxTitle>
           <CircularContent>
-            <CircularProgressbar
-              value={remainingNatMins}
-              maxValue={availableNatMins}
-              text={`${remainingNatMins} min`}
-              styles={circularStyle}
-            />
-            <CircularProgressbar
-              value={remainingIntMins}
-              maxValue={availableIntlMins}
-              text={`${remainingIntMins} min`}
-              styles={circularStyle}
-            />
+            {minuteAllowances}
           </CircularContent>
         </Minutes>
         <Internet>
@@ -97,12 +89,7 @@ function Resources(props) {
             Internet
           </BoxTitle>
           <CircularContent>
-            <CircularProgressbar
-              value={remainingInternet}
-              maxValue={availableInternet}
-              text={`${remainingInternet} GB`}
-              styles={circularStyle}
-            />
+            {internetAllowances}
           </CircularContent>
         </Internet>
       </ResourcesContent>

@@ -17,7 +17,8 @@
     "react-scripts": "3.4.1",
     "react-tracked": "^1.4.1",
     "styled-components": "^5.1.1",
-    "universal-cookie": "^4.0.3"
+    "universal-cookie": "^4.0.3",
+    "use-data-api": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
