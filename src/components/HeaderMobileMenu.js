@@ -56,27 +56,46 @@ const Go = styled(Link)`
 function HeaderMobileMenu({ open }) {
   return (
     <Container open={open}>
-      <Wrapper open={open}>
+      <Wrapper>
         <MenuBox>
           <MenuTitle>
             Subscriptions
           </MenuTitle>
-          <Go to="/mobile/unlimited-x">Unlimited X</Go>
+          <Go to="/mobile/plans/unlimited-x">Unlimited X</Go>
+          <Go to="/mobile/plans/smart">Pannor Smart</Go>
+          <Go to="/mobile/plans/start">Pannor Start</Go>
+          <Go to="/mobile/plans/bundles">Extra bundles</Go>
+          <Go to="/pay">Pay your invoice</Go>
         </MenuBox>
         <MenuBox>
           <MenuTitle>
             Pay as you go
           </MenuTitle>
+          <Go to="/mobile/prepaid/offers">Offers</Go>
+          <Go to="/mobile/prepaid/bundles">Prepaid bundles</Go>
+          <Go to="/mobile/prepaid/bonus">Bonus</Go>
+          <Go to="/mobile/prepaid/sim">SIM card</Go>
+          <Go to="/topup">Add balance</Go>
         </MenuBox>
         <MenuBox>
           <MenuTitle>
-            Loyalty program
+            Services
           </MenuTitle>
+          <Go to="/mobile/services/roaming">Roaming</Go>
+          <Go to="/mobile/services/insurance">Smartphone insurance</Go>
+          <Go to="/mobile/services/volte-vowifi">VoLTE and VoWiFi</Go>
+          <Go to="/mobile/services/number-share">Number share</Go>
+          <Go to="/mobile/services/esim">eSIM</Go>
         </MenuBox>
         <MenuBox>
           <MenuTitle>
-            Benefits
+            For you
           </MenuTitle>
+          <Go to="/mobile/benefits/why-us">Why choosing us</Go>
+          <Go to="/mobile/benefits/loyalty">Loyalty program</Go>
+          <Go to="/mobile/benefits/apps">Pannor Apps</Go>
+          <Go to="/mobile/benefits/community">Community</Go>
+          <Go to="/mobile/benefits/community">Coverage map</Go>
         </MenuBox>
       </Wrapper>
     </Container>

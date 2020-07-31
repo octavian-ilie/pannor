@@ -52,7 +52,7 @@ const NavLink = styled(Link)`
 `;
 
 const TriggerLink = styled.div`
-  color: #222;
+  color: ${({ open }) => open ? 'var(--pannor)' : 'var(--main)'};
   text-decoration: none;
   font-size: 1.1rem;
   margin-right: 20px;

@@ -37,7 +37,6 @@ function Header() {
       <HeaderWrapper>
         <NavContainer>
           <NavLink to="/shop">Shop</NavLink>
-          {/* <NavLink to="/mobile">Mobile</NavLink> */}
           <TriggerLink open={open} setOpen={setOpen} onClick={() => setOpen(!open)}>Mobile</TriggerLink>
           <NavLink to="/landline">Internet & TV</NavLink>
           <NavLink to="/support">Support</NavLink>
