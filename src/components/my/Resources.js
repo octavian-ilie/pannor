@@ -34,7 +34,7 @@ const CircularContent = styled.div`
   padding: 0 2rem 3rem 2rem;
   display: flex;
   flex-direction: row;
-  height: 180px;
+  max-height: 240px;
   justify-items: space-evenly;
 `;
 
@@ -60,9 +60,9 @@ function Resources(props) {
   if(appState.resources) {
     appState.resources.forEach((resource) => {
       if(resource.type === 'minutes') {
-        minuteAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} />);
+        minuteAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} description={resource.description} />);
       } else if (resource.type === 'internet') {
-        internetAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} />);
+        internetAllowances.push(<ResourcesCircular key={resource.id} resourceType={resource.type} amount_remaining={resource.amount_remaining} amount_available={resource.amount_available} description={resource.description} />);
       }
     })
   }
