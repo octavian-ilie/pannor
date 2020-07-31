@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: ${({ open }) => open ? 'auto' : 'auto'};
+  height: auto;
   width: 100%;
   display: ${({ open }) => open ? 'flex' : 'none'};
   flex-direction: column;
-  transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-500%)'};
   background-color: #fff;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease;
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  z-index: -2;
   border-top: 1px solid #dbdbdb;
 `;
 
