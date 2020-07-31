@@ -38,6 +38,17 @@ const CircularContent = styled.div`
   justify-items: space-evenly;
 `;
 
+const BCycle = styled.div`
+  font-family: var(--pannor-medium);
+  color: var(--main);
+  font-size: 1.6rem;
+  padding: 2rem 0 1rem 0;
+`;
+
+const BCycleContent = styled.div`
+  color: var(--main);
+`;
+
 function Resources(props) {
   const [appState, setAppState] = useState({
     loading: false,
@@ -93,6 +104,12 @@ function Resources(props) {
           </CircularContent>
         </Internet>
       </ResourcesContent>
+      <BCycle>
+        Your billing cycle
+      </BCycle>
+      <BCycleContent>
+        All allowances included in your plan and extra bundless will reset monthly on the 6th.
+      </BCycleContent>
     </Wrapper>
   )
 }
