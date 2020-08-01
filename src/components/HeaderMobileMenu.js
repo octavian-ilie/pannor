@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: auto;
+  overflow: hidden;
   width: 100%;
-  display: ${({ open }) => open ? 'flex' : 'none'};
   flex-direction: column;
   background-color: #fff;
-  transition: all 0.3s ease;
-  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   border-top: 1px solid #dbdbdb;
+  display: ${({ open }) => open ? 'flex' : 'none'};
+  transition: all 0.2s ease-in-out;
 `;
 
+// ${({ open }) => open ? 'max-height: 251px; transition: max-height 0.3s ease; border-top: 1px solid #dbdbdb;' : 'max-height: 0; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); border-top: none;'};
+
 const Wrapper = styled.div`
-  height: auto;
   width: 1170px;
   align-self: center;
   padding: 2rem 0;

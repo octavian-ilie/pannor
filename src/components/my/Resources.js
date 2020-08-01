@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ResourcesCircular from './ResourcesCircular';
+import Accordion from './reusable/Accordion';
 
 import {
   Wrapper,
@@ -18,6 +19,7 @@ const ResourcesContent = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 const Minutes = styled(Container)`
@@ -38,15 +40,8 @@ const CircularContent = styled.div`
   justify-items: space-evenly;
 `;
 
-const BCycle = styled.div`
-  font-family: var(--pannor-medium);
-  color: var(--main);
-  font-size: 1.6rem;
-  padding: 2rem 0 1rem 0;
-`;
-
-const BCycleContent = styled.div`
-  color: var(--main);
+const Strong = styled.span`
+  font-weight: 600;
 `;
 
 function Resources(props) {
@@ -104,12 +99,18 @@ function Resources(props) {
           </CircularContent>
         </Internet>
       </ResourcesContent>
-      <BCycle>
+      {/* <BCycle>
         Your billing cycle
       </BCycle>
       <BCycleContent>
         All allowances included in your plan and extra bundless will reset monthly on the 6th.
-      </BCycleContent>
+      </BCycleContent> */}
+      <Accordion title="Your billing cycle">
+      All allowances included in your plan and extra bundless will reset monthly on the <Strong>6th</Strong>.
+      </Accordion>
+      <Accordion title="Good to know">
+      Unused monthly allowances are not transfered to the next billing cycle.
+      </Accordion>
     </Wrapper>
   )
 }

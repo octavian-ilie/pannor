@@ -1,0 +1,59 @@
+/* Container */
+.accordion--section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* Buttons that are used to open and close the accordion panel */
+.accordion {
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  outline: none;
+  height: auto;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  fill: var(--secondary);
+  color: var(--secondary);
+}
+
+.accordion:hover,
+.active {
+  color: var(--main);
+  fill: var(--main);
+}
+
+/* Content title */
+.accordion--title {
+  font-family: var(--pannor-regular);
+  color: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+/* Arrow icon */
+.accordion--icon {
+  /* left */
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Content */
+.accordion--content {
+  overflow: auto;
+  transition: max-height 0.3s ease;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
