@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+let contentHeight;
 
 const Container = styled.div`
   overflow: hidden;
@@ -8,11 +10,9 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #fff;
   border-top: 1px solid #dbdbdb;
-  display: ${({ open }) => open ? 'flex' : 'none'};
-  transition: all 0.2s ease-in-out;
+  display: ${({ open }) => open ? 'flex' : 'flex'};
+  ${({ open }) => open ? `max-height: ${contentHeight ? `${contentHeight}px` : `auto`}; transition: max-height 0.3s ease; border-top: 1px solid #dbdbdb;` : `max-height: 0; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); border-top: none;`};
 `;
-
-// ${({ open }) => open ? 'max-height: 251px; transition: max-height 0.3s ease; border-top: 1px solid #dbdbdb;' : 'max-height: 0; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); border-top: none;'};
 
 const Wrapper = styled.div`
   width: 1170px;
@@ -52,8 +52,13 @@ const Go = styled(Link)`
 `;
 
 function HeaderMobileMenu({ open }) {
+  const content = useRef();
+  const [continut, setContinut] = useState(content);
+
+  contentHeight = continut.scrollHeight;
+
   return (
-    <Container open={open}>
+    <Container open={open} ref={setContinut}>
       <Wrapper>
         <MenuBox>
           <MenuTitle>
