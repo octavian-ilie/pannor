@@ -220,6 +220,7 @@
 .slider .box5 {
   background: url('../img/man_holding-phone.jpg') no-repeat center center/cover;
 }
+
 .slider .box5 button {
   background-color: #fa7268;
 }
@@ -229,6 +230,7 @@
   grid-row: 1 / -1;
   justify-self: center;
 }
+
 @media only screen and (max-width: 650px) {
   .slider .illustration {
     grid-row: 1 / span 1;
@@ -241,6 +243,7 @@
             align-items: center;
   }
 }
+
 .slider .illustration div {
   height: 25rem;
   width: 18rem;
@@ -250,12 +253,14 @@
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
 }
+
 @media only screen and (max-width: 800px) {
   .slider .illustration div {
     height: 20rem;
     width: 15rem;
   }
 }
+
 .slider .illustration div::after, .slider .illustration div::before {
   content: "";
   position: absolute;
@@ -265,10 +270,12 @@
   top: 0;
   left: 0;
 }
+
 .slider .illustration div::after {
   -webkit-transform: translate(4rem, -1rem);
           transform: translate(4rem, -1rem);
 }
+
 .slider .illustration div::before {
   -webkit-transform: translate(2rem, -2rem);
           transform: translate(2rem, -2rem);
@@ -289,12 +296,14 @@
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
+
 @media only screen and (max-width: 650px) {
   .prev,
   .next {
     display: none;
   }
 }
+
 .prev:hover,
 .next:hover {
   opacity: 1;
@@ -336,7 +345,9 @@
     display: none;
   }
 }
+
 .trail div {
+  color: #fff;
   padding: 1rem;
   border-top: 3px solid #fff;
   cursor: pointer;
@@ -344,9 +355,11 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .trail div:hover {
   opacity: .6;
 }
+
 @media only screen and (max-width: 650px) {
   .trail div {
     padding: 1rem;
