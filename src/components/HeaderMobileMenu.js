@@ -9,9 +9,12 @@ const Container = styled.div`
   width: 100%;
   flex-direction: column;
   background-color: #fff;
-  border-top: 1px solid #dbdbdb;
-  display: ${({ open }) => open ? 'flex' : 'flex'};
-  ${({ open }) => open ? `max-height: ${contentHeight ? `${contentHeight}px` : `auto`}; transition: max-height 0.3s ease; border-top: 1px solid #dbdbdb;` : `max-height: 0; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); border-top: none;`};
+  display: flex;
+
+  ${({ open }) => open 
+    ? `max-height: ${contentHeight ? `${contentHeight}px` : `auto`}; transition: max-height 0.3s ease;` 
+    : `max-height: 0; transition: max-height 0.2s cubic-bezier(1, 1, 1, 1);`
+  };
 `;
 
 const Wrapper = styled.div`
@@ -22,6 +25,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  border-top: 1px solid #dbdbdb;
 `;
 
 const MenuBox = styled.div`
