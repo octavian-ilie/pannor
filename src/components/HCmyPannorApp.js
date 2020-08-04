@@ -20,14 +20,14 @@ const Image = styled.div`
   }
 `;
 
-function HCiPhone11() {
+function MyPannor() {
   return (
     <Container>
       <WhiteCard>
         <Image/>
         <CardInfoContainer>
           <Title>
-            myPannor App
+            My Pannor App
           </Title>
           <Text>
             Stay in control over your mobile or landline account on the go with our new iOS and Android application.
@@ -46,4 +46,4 @@ function HCiPhone11() {
   )
 }
 
-export default HCiPhone11;
+export default MyPannor;
