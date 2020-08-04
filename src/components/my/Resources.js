@@ -99,20 +99,14 @@ function Resources(props) {
           </CircularContent>
         </Internet>
       </ResourcesContent>
-      {/* <BCycle>
-        Your billing cycle
-      </BCycle>
-      <BCycleContent>
-        All allowances included in your plan and extra bundless will reset monthly on the 6th.
-      </BCycleContent> */}
       <Accordion title="Your billing cycle">
-      All allowances included in your plan and extra bundless will reset monthly on the <Strong>6th</Strong>.
+        All allowances included in your plan and extra bundless will reset monthly on the <Strong>6th</Strong>.
       </Accordion>
       <Accordion title="Good to know">
-      Unused monthly allowances are not transfered to the next billing cycle.
+        Unused monthly allowances are not transfered to the next billing cycle.
       </Accordion>
     </Wrapper>
-  )
+  );
 }
 
 export default Resources;
