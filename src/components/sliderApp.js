@@ -57,6 +57,7 @@ tl.from(".bg", {x: "-100%", opacity: 0})
   .from("p", {opacity: 0}, "-=0.3")
 //   .from("img", {opacity: 0, y: "30px"}, "-=0.3")
   .from("h1", {opacity: 0, y: "30px"}, "-=0.3")
+//   .from("button", {opacity: 0, y: "-80px"}, "-=0.8")
   .from("button", {opacity: 0, y: "-80px"}, "-=0.8")
 
 // function to restart animation
