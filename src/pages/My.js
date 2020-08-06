@@ -29,7 +29,7 @@ import Resources from '../components/my/Resources';
 import Invoices from '../components/my/Invoices';
 
 function Overview(props) {
-  // Hard-coded data, to be fetched later
+  // Hard-coded data, to be fetched later on login
   const customerId = 1823784;
   const userTotalDue = 0;
 
@@ -51,11 +51,13 @@ function Overview(props) {
   let currentNo = '';
   let firstName = '';
   let lastName = '';
+  let billingCycle;
 
   if(appState.customer) {
     firstName = appState.customer[0].first_name;
     lastName = appState.customer[0].last_name;
     currentNo = `0${appState.customer[0].mobile_number}`;
+    billingCycle = appState.customer[0].billing;
     document.title = defaultTitle + 'Welcome, ' + firstName;
   }
 
@@ -103,6 +105,7 @@ function Overview(props) {
                 path="/my/resources"
                 component={Resources}
                 customerId={customerId}
+                billingCycle={billingCycle}
               />
               <PrivateRoute
                 path="/my/invoices"

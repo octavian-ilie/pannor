@@ -73,6 +73,17 @@ function Resources(props) {
     })
   }
 
+  function showDateSuffix(billingCycle) {
+    if (billingCycle === '1' || billingCycle === '21' || billingCycle === '31') {
+      return 'st';
+    } else if (billingCycle === '2' || billingCycle === '22') {
+        return 'nd';
+      } else if (billingCycle === '3' || billingCycle === '23') {
+        return 'rd';
+      }
+    return 'th';
+  }
+
   return (
     <Wrapper>
       <SectionTitle>
@@ -100,7 +111,7 @@ function Resources(props) {
         </Internet>
       </ResourcesContent>
       <Accordion title="Your billing cycle">
-        All allowances included in your plan and extra bundless will reset monthly on the <Strong>6th</Strong>.
+        All allowances included in your plan and extra bundless will reset monthly on the <Strong>{props.billingCycle}{showDateSuffix(props.billingCycle)}</Strong>.
       </Accordion>
       <Accordion title="Good to know">
         Unused monthly allowances are not transfered to the next billing cycle.
