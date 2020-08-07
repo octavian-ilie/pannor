@@ -102,7 +102,7 @@ function HeaderMobileMenu({ open }) {
           <Go to="/mobile/benefits/loyalty">Loyalty program</Go>
           <Go to="/mobile/benefits/apps">Pannor Apps</Go>
           <Go to="/mobile/benefits/community">Community</Go>
-          <Go to="/mobile/benefits/community">Coverage map</Go>
+          <Go to="/mobile/benefits/coverage">Coverage map</Go>
         </MenuBox>
       </Wrapper>
     </Container>
