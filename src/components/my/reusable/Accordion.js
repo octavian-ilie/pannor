@@ -2,10 +2,21 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Arrow from './Arrow';
 
+import { device } from  '../../../rules/device';
 import './Accordion.css';
 
 const Content = styled.div`
   padding: 1rem 0;
+
+  @media ${device.tablet} {
+    padding: 1rem;
+  }
+`;
+
+const Button = styled.button`
+  @media ${device.tablet} {
+    padding-left: 1rem;
+  }
 `;
 
 function Accordion(props) {
@@ -27,10 +38,10 @@ function Accordion(props) {
 
   return (
     <div className="accordion--section">
-      <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
+      <Button className={`accordion ${setActive}`} onClick={toggleAccordion}>
         <p className="accordion--title">{props.title}</p>
         <Arrow className={`${setRotate}`} width={10} fill={'inherit'} />
-      </button>
+      </Button>
       <div
         ref={content}
         style={{ maxHeight: `${setHeight}` }}

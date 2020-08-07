@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { device } from '../../../rules/device';
+
 import {
   Container,
   BoxTitle,
@@ -8,6 +11,10 @@ import {
 
 const Box = styled(Container)`
   width: 32%;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 const PointsContainer = styled.div`
@@ -34,19 +41,19 @@ const TotalBox = styled.div`
 `;
 
 const SecondaryValue = styled.div`
-  font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #222;
+  font-family: var(--pannor-medium);
+  color: var(--main);
   font-size: 1.4rem;
 `;
 
 const TotalValue = styled.div`
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-regular);
   color: var(--pannor);
   font-size: 2rem;
 `;
 
 const Description = styled.div`
-  color: #888;
+  color: var(--secondary);
   font-size: 0.8rem;
 `;
 

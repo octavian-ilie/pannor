@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import phone from '../../../img/smartphones/apple_iphone-11-pro-max_green.png';
+
+import { device } from '../../../rules/device';
+
 import {
   Container,
   BoxTitle,
@@ -10,6 +13,10 @@ import {
 
 const Box = styled(Container)`
   width: 32%;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`

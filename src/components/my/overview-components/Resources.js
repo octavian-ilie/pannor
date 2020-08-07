@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+
+import { device } from '../../../rules/device';
+
 import {
   Container,
   BoxTitle,
@@ -10,6 +13,11 @@ import {
 
 const Box = styled(Container)`
   width: 66%;
+
+  @media ${device.tablet} {
+    width: 100%;
+    min-height: 300px;
+  }
 `;
 
 const CircularContent = styled.div`

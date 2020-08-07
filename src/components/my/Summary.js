@@ -7,6 +7,8 @@ import Loyalty from './overview-components/Loyalty';
 import Plan from './overview-components/Plan';
 import Phone from './overview-components/Phone';
 
+import { device } from '../../rules/device';
+
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -14,6 +16,10 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 // Mock data, to be fetched later

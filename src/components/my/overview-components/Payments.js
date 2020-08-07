@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import PaidInvoice from './PaidInvoice';
+
+import { device } from '../../../rules/device';
+
 import {
   Container,
   BoxTitle,
@@ -9,6 +12,10 @@ import {
 
 const Box = styled(Container)`
   width: 32%;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 function Payments(props) {

@@ -2,13 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from '../../../components/Icon';
 
+import { device } from '../../../rules/device';
+
 const ContractInfoContainer = styled.div`
-  color: #222;
+  color: var(--main);
   font-size: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-top: 1rem;
+
+  @media ${device.tablet} {
+    padding-bottom: 1rem;
+  }
 `;
 
 const Svg = styled(Icon)`

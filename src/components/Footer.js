@@ -102,7 +102,7 @@ const NavLink = styled(Link)`
   margin-bottom: 0.5rem;
 
   &:hover {
-    color: #222;
+    color: var(--main);
   }
 
   @media ${device.tablet} {
@@ -124,13 +124,14 @@ const MediaRow = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 0;
+    border: none;
   }
 `;
 
 const LogoText = styled.div`
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-regular);
   font-size: 2rem;
-  color: #222;
+  color: var(--main);
   letter-spacing: -1px;
 
   @media ${device.tablet} {
@@ -173,7 +174,7 @@ const Cookies = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: #222;
+    color: var(--main);
   }
 
   @media ${device.tablet} {
@@ -190,7 +191,7 @@ const SocialLink = styled.a`
   margin-left: 10px;
 
   &:hover {
-    color: #222;
+    color: var(--main);
   }
 
   @media ${device.tablet} {
@@ -204,7 +205,7 @@ const CopyLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #222;
+    color: var(--main);
   }
 `;
 

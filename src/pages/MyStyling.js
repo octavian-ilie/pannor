@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../rules/device';
 
 const Background = styled.div`
   width: 100%;
@@ -16,6 +17,11 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const AppContainer = styled.div`
@@ -26,13 +32,23 @@ const AppContainer = styled.div`
   align-items: flex-start;
   margin-bottom: 4rem;
   flex-grow: 1;
+
+  @media ${device.tablet} {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.div`
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-regular);
   font-size: 2rem;
-  color: #222;
+  color: var(--main);
   padding: 4rem 0;
+
+  @media ${device.tablet} {
+    font-size: 1.4rem;
+    padding: 1rem 1rem 0.6rem 1rem;
+  }
 `;
 
 const ChooseNumber = styled.div`
@@ -41,7 +57,7 @@ const ChooseNumber = styled.div`
   font-size: 1.1rem;
   padding: 1rem;
   border-radius: 3px;
-  color: #888;
+  color: var(--secondary);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -53,14 +69,14 @@ const ChooseNumber = styled.div`
               0 32px 64px rgba(0,0,0,0.015);
 
   &:hover {
-    color: #222;
+    color: var(--main);
     padding-left: 88px;
   }
 
   &::before {
     opacity: 0;
     content: 'Switch ';
-    color: #888;
+    color: var(--secondary);
     position: absolute;
     transition: all 0.4s ease;
   }
@@ -70,6 +86,10 @@ const ChooseNumber = styled.div`
     content: 'Switch ';
     position: absolute;
     transform translateX(-70px);
+  }
+
+  @media ${device.tablet} {
+    width: 100%;
   }
 `;
 
@@ -86,11 +106,28 @@ const Navigation = styled.div`
               0 8px 16px rgba(0,0,0,0.015),
               0 16px 32px rgba(0,0,0,0.015),
               0 32px 64px rgba(0,0,0,0.015);
+
+  @media ${device.tablet} {
+    width: 100%;
+    flex-direction: row;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const Content = styled.div`
   width: 75%;
   height: auto;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export { Background, HeaderContainer, AppContainer, Title, ChooseNumber, Navigation, Content };

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ResourcesCircular from './ResourcesCircular';
 import Accordion from './reusable/Accordion';
 
+import { device } from '../../rules/device';
+
 import {
   Wrapper,
   SectionTitle,
@@ -20,16 +22,28 @@ const ResourcesContent = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const Minutes = styled(Container)`
   width: 66%;
   margin-top: 1rem;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 const Internet = styled(Container)`
   width: 32%;
   margin-top: 1rem;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 const CircularContent = styled.div`
@@ -38,6 +52,10 @@ const CircularContent = styled.div`
   flex-direction: row;
   max-height: 240px;
   justify-items: space-evenly;
+
+  @media ${device.tablet} {
+    align-self: center;
+  }
 `;
 
 const Strong = styled.span`
