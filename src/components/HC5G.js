@@ -26,7 +26,7 @@ function HC5G() {
             The best 5G network
           </Title>
           <Text>
-            Joint the best 5G network in the Netherlands, and surf the Internet at high speeds of up to 1 Gbps. Our network is award winning "best in test" of 2020.
+            Join the best 5G network in the Netherlands, and surf the Internet at high speeds of up to 1 Gbps. Our network is award winning "best in test" of 2020.
           </Text>
           <Go to="/support/coverage/5g">Find out where you can enjoy high 5G speeds</Go>
         </CardInfoContainer>

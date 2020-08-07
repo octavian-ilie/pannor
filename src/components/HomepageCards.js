@@ -69,23 +69,43 @@ const CardInfoContainer = styled.div`
 `;
 
 const Title = styled.div`
-  color: #222;
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--main);
+  font-family: var(--pannor-regular);
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
 
 const Text = styled.div`
-  color: #222;
+  color: var(--main);
   flex-grow: 1;
 `;
 
 const Go = styled(Link)`
-  color: #222;
-  text-decoration: underline;
+  color: var(--main);
+  font-family: var(--pannor-medium);
+  text-decoration: none;
+  border: 1px solid var(--main);
+  border-radius: 3px;
+  padding: 12px 16px 8px 16px;
+  position: relative;
+  transition: all 0.2s ease;
 
   &:hover {
-    color: #fa7268;
+    color: #fff;
+    background-color: var(--main);
+  }
+
+  &::after {
+    font-family: 'navIcons' !important;
+    font-weight: 600;
+    position: absolute;
+    content: ' \\e903';
+    right: 10px;
+    color: var(--main);
+  }
+
+  &:hover::after {
+    color: #fff;
   }
 
   @media ${device.tablet} { 

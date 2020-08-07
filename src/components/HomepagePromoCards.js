@@ -15,7 +15,7 @@ const PromoCard = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-regular);
   font-size: 2rem;
   color: var(--pannor);
   margin-bottom: 0.6rem;
@@ -31,7 +31,7 @@ const PromoLink = styled(Link)`
   text-decoration: none;
   background-color: var(--main);
   border-radius: 3px;
-  font-family: 'Octavian Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-medium);
   padding: 12px 16px 8px 16px;
   transition: all 0.2s ease;
   position: relative;
