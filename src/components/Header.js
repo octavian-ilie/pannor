@@ -17,7 +17,7 @@ import {
 
 import HeaderMobileMenu from './HeaderMobileMenu';
 import PrivBusLink from './HeaderLinks';
-import logo from '../img/pannor-logo-transparent_new.png';
+import logo from '../img/pannor_transparent.png';
 import { MyPannor } from './MyPannor';
 import { SearchIcon } from './SearchIcon';
 
