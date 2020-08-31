@@ -10,7 +10,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #eaeaea;
+  background-color: #f5f5f5;
 }
 
 .notfound-wrapper {
@@ -129,7 +129,7 @@
   margin-top: 16px;
 }
 
-.notfound--main-box:hover, .notfound--cs-box:hover, .notfound--report-box:hover {
+.notfound--main-box, .notfound--cs-box, .notfound--report-box {
   box-shadow: 0 1px 2px rgba(0,0,0,0.02), 
               0 2px 4px rgba(0,0,0,0.02), 
               0 4px 8px rgba(0,0,0,0.02), 
@@ -210,6 +210,15 @@
     padding: 1rem;
   }
 
+  .main-box--button {
+    background-color: #222;
+  }
+
+  .main-box--button:hover {
+    background-color: #fa7268;
+    color: #fff;
+  }
+
   .cs-box--button {
     width: 100%;
   }
@@ -221,7 +230,7 @@
 
   .notfound--report-box {
     padding: 1rem;
-    height: 200px;
+    height: auto;
     background-size: 110%;
     background-position: 100% 50%;
   }
