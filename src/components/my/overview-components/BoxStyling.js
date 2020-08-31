@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const BoxTitle = styled.div`
-  font-family: 'Octavian Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--pannor-regular);
   color: #666;
   font-size: 1.2rem;
   font-weight: 500;

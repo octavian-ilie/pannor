@@ -110,6 +110,7 @@ function Overview(props) {
               <PrivateRoute
                 path="/my/invoices"
                 component={Invoices}
+                customerId={customerId}
               />
         </Content>
       </AppContainer>
