@@ -222,11 +222,11 @@ function Footer() {
               About Pannor
             </NavTitle>
             <NavLink to="/about/our-company">Our company</NavLink>
+            <NavLink to={{ pathname: "https://www.pannorgroup.com" }} target="_blank">Pannor Group</NavLink>
             <NavLink to="/press">Press</NavLink>
             <NavLink to="/about/jobs">Work with us</NavLink>
             <NavLink to="/about/sustainability">Sustainability</NavLink>
             <NavLink to="/wholesale">Wholesale</NavLink>
-            <NavLink to="/about/news">Latest news</NavLink>
           </NavColumn>
           <NavColumn>
             <NavTitle>
